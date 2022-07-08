@@ -22,49 +22,35 @@
             required
         /></label>
       </fieldset>
+
       <fieldset>
-        <label
-          ><input type="radio" name="account-type" class="inline" /> Personal
-          Account</label
-        >
-        <label
-          ><input type="radio" name="account-type" class="inline" /> Business
-          Account</label
-        >
         <label>
-          <input type="checkbox" name="terms" class="inline" required /> I
-          accept the
-          <a href="https://www.freecodecamp.org/news/terms-of-service/"
-            >terms and conditions</a
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
-        </label>
-      </fieldset>
-      <fieldset>
-        <label
-          >Upload a profile picture: <input type="file" name="file"
-        /></label>
-        <label
-          >Input your age (years):
-          <input type="number" name="age" min="13" max="120" />
-        </label>
-        <label
-          >How did you hear about us?
-          <select name="referrer">
-            <option value="">(select one)</option>
-            <option value="1">freeCodeCamp News</option>
-            <option value="2">freeCodeCamp YouTube Channel</option>
-            <option value="3">freeCodeCamp Forum</option>
-            <option value="4">Other</option>
-          </select>
-        </label>
+            Upload a profile picture:
+          </button></label
+        >
+
         <label
           >Provide a bio:
           <textarea
             name="bio"
             rows="3"
             cols="30"
-            placeholder="I like coding on the beach..."
+            placeholder="I like writing on the beach..."
           ></textarea>
+        </label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I
+          accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >terms and conditions</a
+          >
         </label>
       </fieldset>
       <input type="submit" value="Submit" />
@@ -83,16 +69,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  background-color: #1b1b32;
-  color: #f5f6f7;
-  font-family: Tahoma;
-  font-size: 16px;
-}
-
 h1,
 p {
   margin: 1em auto;
@@ -149,7 +125,7 @@ input[type="submit"] {
   height: 2em;
   font-size: 1.1rem;
   background-color: #3b3b4f;
-  border-color: white;
+  /* border-color: white; */
   min-width: 300px;
 }
 
