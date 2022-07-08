@@ -33,7 +33,9 @@
           </div>
           <div class="modal-body">
             <div class="profile_pic">
-              <img v-bind:src="" />
+              <img
+                src="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(1).png?raw=true"
+              />
             </div>
           </div>
           <div class="modal-footer">
