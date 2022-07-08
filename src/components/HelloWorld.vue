@@ -1,59 +1,163 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <h1>Sign Up Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action="URL">
+      <fieldset>
+        <label
+          >Enter Your First Name: <input type="text" name="first-name" required
+        /></label>
+        <label
+          >Enter Your Last Name: <input type="text" name="last-name" required
+        /></label>
+        <label
+          >Enter Your Email: <input type="email" name="email" required
+        /></label>
+        <label
+          >Create a New Password:
+          <input
+            type="password"
+            name="password"
+            pattern="[a-z0-5]{8,}"
+            required
+        /></label>
+      </fieldset>
+      <fieldset>
+        <label
+          ><input type="radio" name="account-type" class="inline" /> Personal
+          Account</label
+        >
+        <label
+          ><input type="radio" name="account-type" class="inline" /> Business
+          Account</label
+        >
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I
+          accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >terms and conditions</a
+          >
+        </label>
+      </fieldset>
+      <fieldset>
+        <label
+          >Upload a profile picture: <input type="file" name="file"
+        /></label>
+        <label
+          >Input your age (years):
+          <input type="number" name="age" min="13" max="120" />
+        </label>
+        <label
+          >How did you hear about us?
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label
+          >Provide a bio:
+          <textarea
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like coding on the beach..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+}
+
+fieldset:not(:last-of-type) {
+  border-bottom: 3px solid #3b3b4f;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input,
+textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
 a {
-  color: #42b983;
+  color: #dfdfe2;
 }
 </style>
