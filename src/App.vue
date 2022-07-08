@@ -1,10 +1,23 @@
 <template>
-  <nav>
+  <Navbar />
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </nav>
+  </nav> -->
   <router-view/>
 </template>
+
+<script>
+// import Landing from "./components/Landing.vue";
+import Navbar from "./components/Navbar.vue";
+
+export default {
+  name: "App",
+  components: {
+    Navbar,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -15,8 +28,11 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+nav.navbar {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 nav a {

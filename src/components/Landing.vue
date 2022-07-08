@@ -1,7 +1,25 @@
 <template>
+
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+    <!-- <h1>{{ msg }}</h1> -->
+     <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h1>Hello there, we are BOOKDOM.</h1>
+        <h4>The world's most-loved social storytelling platform</h4>
+        <p class="text-muted mt-2">BOOKDOM connects a global community of 90 million readers and writers through the power of story.</p>
+
+        <div class="buttons d-flex justify-content-center mt-5">
+          <button type="button" class="btn btn-danger btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Reading</button>
+          <button type="button" class="btn btn-warning btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Writing</button>
+        </div>
+      </div>
+      <div class="col">
+        <img alt="Vue logo" src="../assets/books-2022463_1280.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -27,7 +45,7 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -42,7 +60,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+
+.col h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: white;
+}
+
+.col h4 {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin-top: 30px;
+}
+
+.hello {
+  margin-top: 150px;
+}
+
+img {
+  height: 50vh;
+}
+
+/* h3 {
   margin: 40px 0 0;
 }
 ul {
@@ -55,5 +94,5 @@ li {
 }
 a {
   color: #42b983;
-}
+} */
 </style>
