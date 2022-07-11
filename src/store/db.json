@@ -1,0 +1,82 @@
+// let avatars = [
+//     {
+//       id: 1,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/1.png?raw=true",
+//     },
+//     {
+//       id: 2,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true",
+//     },
+//     {
+//       id: 3,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true",
+//     },
+//     {
+//       id: 4,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/4.png?raw=true",
+//     },
+//     {
+//       id: 5,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/5.png?raw=true",
+//     },
+//     {
+//       id: 6,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/6.png?raw=true",
+//     },
+//     {
+//       id: 7,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/7.png?raw=true",
+//     },
+//     {
+//       id: 8,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/8.png?raw=true",
+//     },
+//     {
+//       id: 9,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/9.png?raw=true",
+//     },
+//     {
+//       id: 10,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true",
+//     },
+//     {
+//       id: 11,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/11.png?raw=true",
+//     },
+//     {
+//       id: 12,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
+//     },
+//     {
+//       id: 13,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/13.png?raw=true",
+//     },
+//     {
+//       id: 14,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/14.png?raw=true",
+//     },
+//     {
+//       id: 15,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
+//     },
+//     {
+//       id: 16,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/16.png?raw=true",
+//     },
+//     {
+//       id: 17,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/17.png?raw=true",
+//     },
+//     {
+//       id: 18,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/18.png?raw=true",
+//     },
+//     {
+//       id: 19,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/19.png?raw=true",
+//     },
+//     {
+//       id: 20,
+//       img_url: "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/20.png?raw=true",
+//     },
+//   ];

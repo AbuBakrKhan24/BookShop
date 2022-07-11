@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- Button trigger modal -->
     <!-- <button
@@ -35,17 +35,17 @@
             <div class="profile_pic">
               <select v-model="avatar">
                 <option
-                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(1).png?raw=true"
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/1.png?raw=true"
                 >
                   1
                 </option>
                 <option
-                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(11).png?raw=true"
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true"
                 >
                   2
                 </option>
                 <option
-                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(10).png?raw=true"
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true"
                 >
                   3
                 </option>
