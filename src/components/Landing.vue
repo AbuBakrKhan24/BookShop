@@ -9,14 +9,25 @@
         <h4>The world's most-loved social storytelling platform</h4>
         <p class="text-muted mt-2">BOOKDOM connects a global community of 90 million readers and writers through the power of story.</p>
 
-        <div class="buttons d-flex justify-content-center mt-5">
+        <div class="buttons d-flex justify-content-center mt-5 mb-5">
           <button type="button" class="btn btn-danger btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Reading</button>
           <button type="button" class="btn btn-warning btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Writing</button>
         </div>
       </div>
       <div class="col">
-        <img alt="Vue logo" src="../assets/books-2022463_1280.png" class="img-fluid">
+        <img alt="Vue logo" src="../assets/bookdom-removebg-preview.png" class="img-fluid">
       </div>
+    </div>
+  </div>
+  <div id="footer" class="">
+    <div class="container d-flex justify-content-between">
+      <p class="footer-text mt-5">© 2022 BOOKDOM</p>
+      <ul class="icons mt-5 d-flex">
+        <li class="ms-5 text-light"><i class="fa-brands fa-facebook"></i></li>
+        <li class="ms-5 text-light"><i class="fa-brands fa-instagram"></i></li>
+        <li class="ms-5 text-light"><i class="fa-brands fa-twitter"></i></li>
+        <li></li>
+      </ul>
     </div>
   </div>
     <!-- <p>
@@ -81,6 +92,10 @@ img {
   height: 50vh;
 }
 
+#footer {
+  height: 100px;
+  background-color: grey;
+}
 /* h3 {
   margin: 40px 0 0;
 }
