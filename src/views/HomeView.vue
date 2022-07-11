@@ -33,10 +33,26 @@
           </div>
           <div class="modal-body">
             <div class="profile_pic">
-              <img
-                src="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(1).png?raw=true"
-              />
+              <select v-model="avatar">
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(1).png?raw=true"
+                >
+                  1
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(11).png?raw=true"
+                >
+                  2
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/avataaars%20(10).png?raw=true"
+                >
+                  3
+                </option>
+              </select>
             </div>
+            <p>img: {{ avatar }}</p>
+            <img v-if="avatar" :src="avatar" alt="" />
           </div>
           <div class="modal-footer">
             <button
@@ -59,6 +75,11 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
+  data() {
+    return {
+      avatar: "",
+    };
+  },
   name: "HomeView",
   components: {
     HelloWorld,
