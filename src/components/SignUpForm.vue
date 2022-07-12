@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="Form_Holder">
     <div class="card" style="width: fit-content">
       <div class="card-body">
         <svg
@@ -85,17 +85,118 @@
           </fieldset>
 
           <fieldset>
-            <label>
-              <!-- Button trigger modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Upload a profile picture:
-              </button></label
-            >
+            <img
+              v-if="avatar"
+              :src="avatar"
+              class="rounded-circle shadow-4"
+              style="width: 150px"
+              alt="Avatar"
+            />
+            <label
+              >Choose your avatar:
+              <select v-model="avatar" multiple>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/1.png?raw=true"
+                >
+                  1
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true"
+                >
+                  2
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true"
+                >
+                  3
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/4.png?raw=true"
+                >
+                  4
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/5.png?raw=true"
+                >
+                  5
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/6.png?raw=true"
+                >
+                  6
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/7.png?raw=true"
+                >
+                  7
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/8.png?raw=true"
+                >
+                  8
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/9.png?raw=true"
+                >
+                  9
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true"
+                >
+                  10
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/11.png?raw=true"
+                >
+                  11
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true"
+                >
+                  12
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/13.png?raw=true"
+                >
+                  13
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/14.png?raw=true"
+                >
+                  14
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true"
+                >
+                  15
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/16.png?raw=true"
+                >
+                  16
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/17.png?raw=true"
+                >
+                  17
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/18.png?raw=true"
+                >
+                  18
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/19.png?raw=true"
+                >
+                  19
+                </option>
+                <option
+                  value="https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/20.png?raw=true"
+                >
+                  20
+                </option>
+              </select>
+            </label>
 
             <label
               >Provide a bio:
@@ -123,7 +224,12 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  data() {
+    return {
+      avatar: "",
+    };
+  },
+  name: "SignUpForm",
   props: {
     msg: String,
   },
@@ -132,15 +238,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-// card
-.hello {
+// Form_Holder
+.Form_Holder {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 5%;
 }
-// card done
+// Form_Holder done
 
-/* dsnflas */
+/* Book Icon animation */
+
 body {
   background-color: #f5f5f1;
   display: flex;
@@ -208,11 +316,7 @@ body {
   }
 }
 
-/* dsnflas */
-
-img {
-  width: 50px;
-}
+/* Book Icon animation done */
 
 h1,
 p {
@@ -252,9 +356,9 @@ select {
 
 input,
 textarea {
-  background-color: #0a0a23;
+  background-color: #ffffff;
   border: 1px solid #0a0a23;
-  color: #ffffff;
+  color: #0a0a23;
 }
 
 .inline {
@@ -269,9 +373,14 @@ input[type="submit"] {
   margin: 1em auto;
   height: 2em;
   font-size: 1.1rem;
-  background-color: #3b3b4f;
-  /* border-color: white; */
+  // background-color: #3b3b4f;
+  // /* border-color: white; */
   min-width: 300px;
+}
+
+input[type="submit"]:focus {
+  background-color: #0a0a23;
+  color: white;
 }
 
 input[type="file"] {
