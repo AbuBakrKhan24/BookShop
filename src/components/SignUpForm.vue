@@ -62,15 +62,12 @@
         <h1>Sign Up Form</h1>
         <p>Please fill out this form with the required information</p>
         <form action="URL">
+          <!-- Form details -->
           <fieldset>
             <label
-              >Enter Your First Name:
-              <input type="text" name="first-name" required
+              >Add Username <input type="text" name="user-name" required
             /></label>
-            <label
-              >Enter Your Last Name:
-              <input type="text" name="last-name" required
-            /></label>
+
             <label
               >Enter Your Email: <input type="email" name="email" required
             /></label>
@@ -83,7 +80,7 @@
                 required
             /></label>
           </fieldset>
-
+          <!-- Avatar -->
           <fieldset>
             <img
               v-if="avatar"
