@@ -17,8 +17,8 @@
           </fieldset>
           <input type="submit" value="Login" />
           <!-- <button type="submit">login</button> -->
+          <div v-if="user">Welcome {{ user.username }}</div>
         </form>
-        <div v-if="user">Welcome {{ user.username }}</div>
         <footer>
           Don't have an account?
           <router-link to="/">Sign Up</router-link>

@@ -3,8 +3,15 @@
     <router-link to="/">Sign Up</router-link> |
     <router-link to="/login">Login</router-link>
   </nav>
+  <Navbar></Navbar>
   <router-view />
 </template>
+<script>
+// import Navbar from "./components/Navbar.vue";
+// export default {
+//   components: { Navbar },
+// };
+</script>
 
 <style>
 body {

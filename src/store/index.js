@@ -23,3 +23,24 @@ export default createStore({
   },
   modules: {},
 });
+
+// computed: {
+//     user() {
+//       return this.$store.state.user;
+//     },
+//   },
+//   data() {
+//     return {
+//       email: "",
+//       password: "",
+//     };
+//   },
+//   methods: {
+//     login(state, email, password) {
+//       state.email = email;
+//       state.password = password;
+//       data.setItem("email", email);
+//       data.setItem("password", password);
+//       alert("logged in");
+//     },
+//   },
