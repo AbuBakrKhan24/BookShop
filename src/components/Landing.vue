@@ -10,8 +10,8 @@
         <p class="text-muted mt-2">BOOKDOM connects a global community of 90 million readers and writers through the power of story.</p>
 
         <div class="buttons d-flex justify-content-center mt-5 mb-5">
-          <button type="button" class="btn btn-danger btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Reading</button>
-          <button type="button" class="btn btn-warning btn-outline-secondary btn-lg ms-5 text-light rounded-pill">Start Writing</button>
+          <button type="button" class="read btn btn-lg ms-5 text-light rounded-pill">Start Reading</button>
+          <button type="button" class="write btn btn-lg ms-5 text-light rounded-pill">Start Writing</button>
         </div>
       </div>
       <div class="col">
@@ -92,9 +92,27 @@ img {
   height: 50vh;
 }
 
+button.read {
+  background-color: rgba(255, 152, 104);
+}
+
+button.read:hover {
+  background-color: rgba(81, 153, 252);
+}
+
+button.write {
+  background-color: rgba(255, 80, 104);
+}
+
+button.write:hover {
+  background-color: rgba(81, 153, 252);
+}
+
 #footer {
   height: 100px;
-  background-color: grey;
+  /* background-color: grey; */
+  background-color: rgba(0,0,0,.367);
+  position: relative;
 }
 /* h3 {
   margin: 40px 0 0;
