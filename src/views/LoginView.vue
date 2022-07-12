@@ -54,6 +54,8 @@ export default {
 // box
 .box {
   min-height: 88vh;
+  background-image: url(https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/Decoration/border-design.png?raw=true);
+  object-fit: cover;
 }
 // box done
 
