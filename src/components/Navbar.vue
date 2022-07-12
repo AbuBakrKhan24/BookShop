@@ -1,22 +1,21 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/library">Library</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/register">Register</router-link>
+
+    <div v-if="user"><router-link to="/library">Library</router-link> |</div>
+    <div v-else>
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/register">Register</router-link>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  // <div v-if="user">
-  // router-link to ="/properties">properties></router-link>
-  // </div>
-  // < div v-else>
-  // <router-link to ="/login"> login ></router-link>
-  // computed:{
-  //   user(){return this.$store.state.user}
-  // }
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
 };
 </script>
 <style>

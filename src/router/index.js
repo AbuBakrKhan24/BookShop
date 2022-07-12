@@ -7,6 +7,11 @@ const routes = [
     component: () => import("../views/Library.vue"),
   },
   {
+    path: "/library/:id",
+    name: "SingleBook",
+    component: () => import("../views/SingleBook.vue"),
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import("../views/Login.vue"),
