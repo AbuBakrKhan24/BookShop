@@ -10,6 +10,7 @@ const routes = [
     path: "/library/:id",
     name: "SingleBook",
     component: () => import("../views/SingleBook.vue"),
+    props: true,
   },
   {
     path: "/login",
