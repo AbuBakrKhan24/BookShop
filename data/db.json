@@ -923,7 +923,7 @@
       "role": "creator"
     },
     {
-      "id": "2",
+      "id": 2,
       "email": "brenda@gmail.com",
       "password": "password2",
       "username": "brendafassie",
@@ -935,7 +935,7 @@
       "role": "creator"
     },
     {
-      "id": "3",
+      "id": 3,
       "email": "catherine@gmail.com",
       "password": "password3",
       "username": "catherinejones",
@@ -947,7 +947,7 @@
       "role": "creator"
     },
     {
-      "id": "4",
+      "id": 4,
       "email": "devon@gmail.com",
       "password": "password4",
       "username": "devonfredricks",
@@ -959,7 +959,7 @@
       "role": "creator"
     },
     {
-      "id": "5",
+      "id": 5,
       "email": "eugene@gmail.com",
       "password": "password5",
       "username": "eugeneappolis",
@@ -971,7 +971,7 @@
       "role": "creator"
     },
     {
-      "id": "6",
+      "id": 6,
       "email": "fred@gmail.com",
       "password": "password6",
       "username": "fredsmith",
@@ -983,7 +983,7 @@
       "role": "creator"
     },
     {
-      "id": "7",
+      "id": 7,
       "email": "greg@gmail.com",
       "password": "password7",
       "username": "greghunter",
@@ -995,7 +995,7 @@
       "role": "creator"
     },
     {
-      "id": "8",
+      "id": 8,
       "email": "hugh@gmail.com",
       "password": "password8",
       "username": "hughjackman",
@@ -1007,7 +1007,7 @@
       "role": "creator"
     },
     {
-      "id": "9",
+      "id": 9,
       "email": "isla@gmail.com",
       "password": "password9",
       "username": "islarhodes",
@@ -1019,7 +1019,7 @@
       "role": "creator"
     },
     {
-      "id": "10",
+      "id": 10,
       "email": "janet@gmail.com",
       "password": "password10",
       "username": "janetjackson",
@@ -1031,7 +1031,7 @@
       "role": "creator"
     },
     {
-      "id": "11",
+      "id": 11,
       "email": "zoevanderschyff13@gmail.com",
       "password": "passwordzoe",
       "username": "zoevds",

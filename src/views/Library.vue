@@ -9,6 +9,11 @@
 <script>
 import BookCard from "../components/BookCard.vue";
 export default {
+  computed: {
+    books() {
+      return this.$store.state.books;
+    },
+  },
   components: { BookCard },
   data() {
     return { books: [] };
