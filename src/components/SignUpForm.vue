@@ -61,19 +61,22 @@
         </svg>
         <h1>Sign Up Form</h1>
         <p>Please fill out this form with the required information</p>
-        <form action="URL">
+        <form @submit.prevent="register">
           <!-- Form details -->
           <fieldset>
             <label
-              >Add Username <input type="text" name="user-name" required
+              >Add Username
+              <input v-model="username" type="text" name="user-name" required
             /></label>
 
             <label
-              >Enter Your Email: <input type="email" name="email" required
+              >Enter Your Email:
+              <input v-model="email" type="email" name="email" required
             /></label>
             <label
               >Create a New Password:
               <input
+                v-model="password"
                 type="password"
                 name="password"
                 pattern="[a-z0-5]{8,}"
@@ -212,8 +215,11 @@
               >
             </label>
           </fieldset>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Sign Up" />
         </form>
+        <div v-if="user">
+          Welcome {{ user.username }} Your Sign Up was an success!
+        </div>
       </div>
     </div>
   </div>
@@ -221,15 +227,34 @@
 
 <script>
 export default {
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   data() {
     return {
+      username: "",
+      email: "",
+      password: "",
       avatar: "",
     };
   },
-  name: "SignUpForm",
-  props: {
-    msg: String,
+  methods: {
+    register() {
+      this.$store.dispatch("register", {
+        username: this.username,
+        email: this.email,
+        password: this.password,
+        avatar: this.avatar,
+      });
+    },
   },
+
+  // name: "SignUpForm",
+  // props: {
+  //   msg: String,
+  // },
 };
 </script>
 

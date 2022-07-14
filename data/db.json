@@ -1041,6 +1041,49 @@
       "location": "Ottowa, Canada",
       "about": "Seriously, hopelessly obsessed with crime books. ",
       "role": "admin"
+    },
+    {
+      "username": "username",
+      "email": "email",
+      "password": "password",
+      "avatar": "avatar",
+      "id": 12
+    },
+    {
+      "username": "Abu",
+      "email": "abubakrkhan224@gmail.com",
+      "password": "password100",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true"
+      ],
+      "id": 13
+    },
+    {
+      "username": "Jason",
+      "email": "jason@gmail.com",
+      "password": "password1001",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/20.png?raw=true"
+      ],
+      "id": 14
+    },
+    {
+      "username": "Mika",
+      "email": "mika@gmail.com",
+      "password": "whyisabugay",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true"
+      ],
+      "id": 15
+    },
+    {
+      "username": "Mika",
+      "email": "mika@gmail.com",
+      "password": "whyisabugay",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true"
+      ],
+      "id": 16
     }
   ],
   "library": [],

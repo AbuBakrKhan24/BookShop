@@ -1,10 +1,28 @@
 <template>
+  <Navbar />
   <nav>
-    <router-link to="/">Sign Up</router-link> |
-    <router-link to="/login">Login</router-link>
+    <router-link to="/signup">Sign Up</router-link> |
+    <router-link to="/login">Login</router-link> |
+    <router-link to="/home">Home</router-link> |
+    <router-link to="/library">Library</router-link> |
+
+    <router-link to="/profile">Profile</router-link>
   </nav>
   <router-view />
 </template>
+
+<script>
+// import Landing from "./components/Landing.vue";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+
+export default {
+  name: "App",
+  components: {
+    Navbar,
+  },
+};
+</script>
 
 <style>
 body {

@@ -5,20 +5,26 @@
         <form @submit.prevent="login">
           <p>Log in to Bookdom</p>
           <fieldset>
+            <!-- Username -->
             <label
               >Enter Email
               <input type="text" name="user-name" required v-model="email"
             /></label>
-
+            <!-- Username done -->
+            <!-- Password -->
             <label
               >Enter Password
               <input type="text" name="user-name" required v-model="password"
             /></label>
+            <!-- Password done -->
           </fieldset>
+          <!-- Button to submit  -->
           <input type="submit" value="Login" />
           <!-- <button type="submit">login</button> -->
+          <!-- Button to submit done -->
         </form>
         <div v-if="user">Welcome {{ user.username }}</div>
+        <!-- <div v-else class="error">Error Credentials Does Not Match!</div> -->
         <footer>
           Don't have an account?
           <router-link to="/">Sign Up</router-link>
@@ -139,6 +145,10 @@ input[type="file"] {
 
 a {
   color: #0a0a23;
+}
+
+.error {
+  color: red;
 }
 
 footer {
