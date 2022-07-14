@@ -1,7 +1,7 @@
 <template>
   <p>This is the id {{ $route.params.id }}</p>
   <div v-if="book">
-    <button @click="deleteBook(id)" v-if="book.createdBy === user.id">
+    <button @click="deleteBook(book.id)" v-if="book.createdBy === user.id">
       Delete
     </button>
 
@@ -189,8 +189,11 @@ export default {
     updateBook() {
       this.$store.dispatch("updateBook", this.book);
     },
-    addReadingList() {
-      this.$store.dispatch("addReadingList", this.id);
+    addReadingList(id) {
+      this.$store.dispatch("addReadingList", id);
+    },
+    deleteBook(id) {
+      this.$store.dispatch("deleteBook", id);
     },
   },
 };

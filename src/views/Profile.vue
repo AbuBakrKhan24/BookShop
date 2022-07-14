@@ -1,24 +1,74 @@
 <template>
   <div class="showReadingList">
-    <img :src="book.cover" style="height: 100px" />
-    <div class="book-details">
-      <h2>{{ book.title }}</h2>
-    </div>
+    {{ readingList }}
+
+    <button
+      @click="deleteReadingListItem(item)"
+      v-for="item of readingList"
+      :key="item"
+    >
+      Remove {{ item }}
+    </button>
+  </div>
+  <div>
+    <button @click="updateUserInfo">EDIT PROFILE</button>
   </div>
 </template>
 <script>
 export default {
-  props: ["id"],
   computed: {
     readingList() {
-      console.log(this.$store.state.readingList);
-      return this.$store.state.readingList;
+      return this.$store.state.user.readingList;
     },
   },
-
-  mounted() {
-    this.$store.dispatch("getReadingList");
+  methods: {
+    deleteReadingListItem(id) {
+      this.$store.dispatch("removeReadingList", id);
+    },
   },
 };
 </script>
-<style></style>
+<style>
+.display {
+  height: 50vh;
+  width: 100vw;
+  background-color: rgb(56, 52, 52);
+}
+
+.profilepicture {
+  width: 100px;
+  height: 100px;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+
+.topbar {
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  border-bottom: solid 2px black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.col-4 {
+  height: 200px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border: solid 1px grey;
+}
+
+.col-8 {
+  height: 400px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border: solid 1px grey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+</style>

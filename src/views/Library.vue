@@ -1,7 +1,7 @@
 <template>
   <div class="container p-3">
-    <input type="text" v-model="search" />
     <div class="book-display row" v-if="books">
+      <button @click="sortBooks">Sort By Title</button>
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -188,6 +188,9 @@ export default {
   methods: {
     addBook() {
       this.$store.dispatch("addBook", this.book);
+    },
+    sortBooks() {
+      this.$store.commit("sortBooksByTitle");
     },
   },
 };

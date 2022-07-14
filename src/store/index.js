@@ -5,7 +5,7 @@ export default createStore({
     user: null,
     book: null,
     books: null,
-    readingList: null,
+    asc: true,
   },
 
   mutations: {
@@ -17,6 +17,22 @@ export default createStore({
     },
     setBooks: (state, books) => {
       state.books = books;
+    },
+    sortBooksByTitle: (state) => {
+      state.books = state.books.sort((a, b) => {
+        // return a.number - b.number;
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      });
+      if (!state.asc) {
+        state.books.reverse();
+      }
+      state.asc = !state.asc;
     },
   },
   actions: {
@@ -79,7 +95,7 @@ export default createStore({
         method: "DELETE",
       })
         .then((response) => response.json())
-        .then((json) => context.dispatch("getBooks"));
+        .then(() => context.dispatch("getBooks"));
     },
 
     // UPDATE A BOOK
@@ -120,11 +136,19 @@ export default createStore({
     },
 
     // PROFILE
-
+    // ADD READING LIST
     addReadingList: async (context, id) => {
-      this.$state.user.readingList.push(id);
-      context.dispatch("updateUserInfo", this.$state.user);
+      context.state.user.readingList.push(id);
+      context.dispatch("updateUserInfo", context.state.user);
     },
+    // DELETE READING LIST ITEM
+    removeReadingList: async (context, id) => {
+      context.state.user.readingList = context.state.user.readingList.filter(
+        (item) => item != id
+      );
+      context.dispatch("updateUserInfo", context.state.user);
+    },
+
     // DELETE A USER
     deleteUser: async (context, id) => {
       fetch("http://localhost:3000/users/" + id, {
@@ -136,12 +160,28 @@ export default createStore({
 
     // UPDATE A USER
     updateUserInfo: async (context, user) => {
-      const { about, location, id } = user;
+      const {
+        id,
+        email,
+        password,
+        username,
+        avatar,
+        readingList,
+        location,
+        about,
+        role,
+      } = user;
       fetch("http://localhost:3000/users/" + id, {
         method: "PUT",
         body: JSON.stringify({
-          about: about,
+          email: email,
+          password: password,
+          username: username,
+          avatar: avatar,
+          readingList: readingList,
           location: location,
+          about: about,
+          role: role,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -153,3 +193,6 @@ export default createStore({
   },
   modules: {},
 });
+
+// dispacth = action
+// commit =mutation
