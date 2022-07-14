@@ -7,6 +7,7 @@
 
     <!-- Button trigger modal -->
     <button
+      v-if="book.createdBy === user.id"
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
@@ -20,7 +21,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Edit Your Book</h5>
             <button
               type="button"
               class="btn-close"
@@ -29,83 +30,113 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form @submit.prevent="updateBook">
+              <div class="title form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Title"
+                  v-model="book.title"
+                />
+                <label for="floatingTitle">Title</label>
+              </div>
+              <div class="description form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingDescription"
+                  placeholder="Description"
+                  v-model="book.description"
+                />
+                <label for="floatingDescription">Description</label>
+              </div>
+              <div class="form-floating genre">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  v-model="genre"
+                >
+                  <option value="art">Art</option>
+                  <option value="education">Education</option>
+                  <option value="biography">Biography</option>
+                  <option value="business">Business</option>
+                  <option value="child & youth">Child & Youth</option>
+                  <option value="environment">Environment</option>
+                  <option value="health">Health</option>
+                  <option value="fiction & literature">
+                    Fiction & Literature
+                  </option>
+                  <option value="lifestyle">Lifestyle</option>
+                  <option value="personal growth">Personal Growth</option>
+                  <option value="religion">Religion</option>
+                  <option value="law">Law</option>
+                  <option value="technology">Technology</option>
+                  <option value="science">Science</option>
+                </select>
+                <label for="floatingGenre">Genre</label>
+              </div>
+              <div class="year form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="floatingYear"
+                  placeholder="Year"
+                  v-model="book.year"
+                />
+                <label for="floatingYear">Year</label>
+              </div>
+              <div class="pages form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="floatingPages"
+                  placeholder="Pages"
+                  v-model="book.pages"
+                />
+                <label for="floatingPages">Pages</label>
+              </div>
+              <div class="tags form-floating">
+                <select class="form-select" v-model="tags">
+                  <option selected>Open this select menu</option>
+                  <option value="drawing">Drawing</option>
+                  <option value="design">Design</option>
+                  <option value="programming">Programming</option>
+                  <option value="self-environment">Self-environment</option>
+                  <option value="economy">Economy</option>
+                  <option value="biology">Biology</option>
+                  <option value="inspirational">Inspirational</option>
+                  <option value="parenting">Parenting</option>
+                  <option value="lifestyle">Lifestyle</option>
+                  <option value="garden">Garden</option>
+                  <option value="spirituality">Spirituality</option>
+                  <option value="politics">Politics</option>
+                </select>
+                <label for="floatingTags">Tags</label>
+              </div>
               <div class="file form-floating mb-3">
                 <input
                   type="text"
                   class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  id="floatingFile"
+                  placeholder="file url"
+                  v-model="book.file"
                 />
-                <label for="floatingInput">Email address</label>
+                <label for="floatingInput">Url of work</label>
               </div>
               <div class="cover form-floating">
                 <input
-                  type="password"
+                  type="text"
                   class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
+                  id="floatingCover"
+                  placeholder="Cover"
+                  v-model="book.cover"
                 />
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword">Cover</label>
               </div>
-              <div class="title form-floating">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="description form-floating">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="genre">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-              </div>
-              <div class="year form-floating">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="pages form-floating">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div class="tags">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <button @click="updateBook(id)" v-if="book.createdBy === user.id">
-                SAVE
-              </button>
-              </div>
+              <button type="submit">Save</button>
             </form>
-          
+          </div>
 
           <div class="modal-footer">
             <button
@@ -119,7 +150,7 @@
         </div>
       </div>
     </div>
-
+    <button @click="addReadingList(id)" v-if="user">Read this</button>
     <div class="singleBookCard">
       <img v-bind:src="book.cover" />
       <p>{{ book.title }}</p>
@@ -142,9 +173,24 @@ export default {
   mounted() {
     this.$store.dispatch("getBook", this.id);
   },
+  data() {
+    return {
+      genre: "",
+      file: "",
+      cover: "",
+      title: "",
+      pages: "",
+      tags: "",
+      description: "",
+      year: "",
+    };
+  },
   methods: {
-    updateBook(id) {
-      this.$store.dispatch("deleteBook", id);
+    updateBook() {
+      this.$store.dispatch("updateBook", this.book);
+    },
+    addReadingList() {
+      this.$store.dispatch("addReadingList", this.id);
     },
   },
 };

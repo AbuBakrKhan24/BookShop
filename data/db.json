@@ -1,30 +1,30 @@
 {
   "books": [
     {
-      "id": 2,
-      "createdBy": 1,
       "genre": "art",
       "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
       "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
-      "title": "Digital Colour in Graphic Design",
+      "title": "Digital Colour in Graphic Design (Not for the colour blind)",
       "pages": "225",
       "tags": "design",
       "audience": "all",
-      "description": "Digital Graphic Design, showing how the use of colour greatly produce spots of colour,",
-      "year": "2012"
+      "description": "Showing how the use of colour greatly produce spots of colour,",
+      "year": "2012",
+      "createdBy": 1,
+      "id": 2
     },
     {
-      "id": 3,
-      "createdBy": 1,
       "genre": "art",
+      "createdBy": 1,
       "file": "https://www.pdfdrive.com/mastering-photoshop-for-web-design-d8109058.html",
       "cover": "https://cdn.asaha.com/assets/thumbs/bb3/bb394f5e6d24d9e18a574df6a70a22a3.jpg",
-      "title": "Mastering Photoshop for Web Design",
+      "title": "Mastering Photoshop for Web Designers",
       "pages": "216",
       "tags": "design",
       "audience": "all",
       "description": "details such as subtle textures, shading and smooth shapes.",
-      "year": "2011"
+      "year": "2011",
+      "id": 3
     },
     {
       "id": 4,
@@ -903,8 +903,7 @@
       "password": "password1",
       "username": "alicejohnson",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/18.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Cape Town, South Africa",
       "about": "Book worm ",
       "role": "creator"
@@ -915,8 +914,7 @@
       "password": "password2",
       "username": "brendafassie",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/14.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Atlana, United States of America",
       "about": "Foodie",
       "role": "creator"
@@ -927,8 +925,7 @@
       "password": "password3",
       "username": "catherinejones",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Budapest, Hungary",
       "about": "Part time writer",
       "role": "creator"
@@ -939,8 +936,7 @@
       "password": "password4",
       "username": "devonfredricks",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "New Delhi, India",
       "about": "Lover of writing",
       "role": "creator"
@@ -951,8 +947,7 @@
       "password": "password5",
       "username": "eugeneappolis",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Sydney, Australia",
       "about": "I enjoy sunlight, reading and knitting",
       "role": "creator"
@@ -963,8 +958,7 @@
       "password": "password6",
       "username": "fredsmith",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Auckland, New Zealand",
       "about": "I enjoy creating my own world through writing",
       "role": "creator"
@@ -975,8 +969,7 @@
       "password": "password7",
       "username": "greghunter",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Johannesburg, South Africa",
       "about": "I hope to let others see my big world through my writing",
       "role": "creator"
@@ -987,8 +980,7 @@
       "password": "password8",
       "username": "hughjackman",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/4.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Windhoek, Nambia",
       "about": "My creativity is fueled by coffee",
       "role": "creator"
@@ -999,8 +991,7 @@
       "password": "password9",
       "username": "islarhodes",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/6.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Nairobi, Kenya",
       "about": "A kidnapper could catch me by offering me free library access",
       "role": "creator"
@@ -1011,8 +1002,7 @@
       "password": "password10",
       "username": "janetjackson",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "New York, United States of America",
       "about": "Books over boys, PERIODT",
       "role": "creator"
@@ -1023,8 +1013,7 @@
       "password": "passwordzoe",
       "username": "zoevds",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/13.png?raw=true",
-      "readingList": "",
-      "works": "",
+      "readingList": [],
       "location": "Ottowa, Canada",
       "about": "Seriously, hopelessly obsessed with crime books. ",
       "role": "admin"

@@ -5,6 +5,7 @@ export default createStore({
     user: null,
     book: null,
     books: null,
+    readingList: null,
   },
 
   mutations: {
@@ -93,6 +94,7 @@ export default createStore({
         tags,
         audience,
         description,
+        createdBy,
         year,
       } = book;
       fetch("http://localhost:3000/books/" + id, {
@@ -107,6 +109,7 @@ export default createStore({
           audience: audience,
           description: description,
           year: year,
+          createdBy,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -117,6 +120,11 @@ export default createStore({
     },
 
     // PROFILE
+
+    addReadingList: async (context, id) => {
+      this.$state.user.readingList.push(id);
+      context.dispatch("updateUserInfo", this.$state.user);
+    },
     // DELETE A USER
     deleteUser: async (context, id) => {
       fetch("http://localhost:3000/users/" + id, {
