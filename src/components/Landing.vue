@@ -2,7 +2,7 @@
 
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-     <div class="container mt-5">
+     <div class="container">
     <div class="row">
       <div class="col">
         <h1>Hello there, we are BOOKDOM.</h1>
@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <div id="footer" class="">
+  <!-- <div id="footer" class="">
     <div class="container d-flex justify-content-between">
       <p class="footer-text mt-5">© 2022 BOOKDOM</p>
       <ul class="icons mt-5 d-flex">
@@ -29,7 +29,7 @@
         <li></li>
       </ul>
     </div>
-  </div>
+  </div> -->
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -84,8 +84,14 @@ export default {
    margin-top: 30px;
 }
 
+.col {
+  margin-top: 130px;
+}
+
 .hello {
-  margin-top: 150px;
+  margin-top: 20px;
+  background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  min-height: 100vh;
 }
 
 img {
