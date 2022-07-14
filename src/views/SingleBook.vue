@@ -150,7 +150,7 @@
         </div>
       </div>
     </div>
-    <button @click="addReadingList(id)" v-if="user">Read this</button>
+    <button @click="addReadingList(book)" v-if="user">Read this</button>
     <div class="singleBookCard">
       <img v-bind:src="book.cover" />
       <p>{{ book.title }}</p>
@@ -189,8 +189,8 @@ export default {
     updateBook() {
       this.$store.dispatch("updateBook", this.book);
     },
-    addReadingList(id) {
-      this.$store.dispatch("addReadingList", id);
+    addReadingList(book) {
+      this.$store.dispatch("addReadingList", book);
     },
     deleteBook(id) {
       this.$store.dispatch("deleteBook", id);

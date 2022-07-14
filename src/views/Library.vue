@@ -187,7 +187,17 @@ export default {
   },
   methods: {
     addBook() {
-      this.$store.dispatch("addBook", this.book);
+      const book = {
+        genre: this.genre,
+        file: this.file,
+        cover: this.cover,
+        title: this.title,
+        pages: this.pages,
+        tags: this.tags,
+        description: this.description,
+        year: this.year,
+      };
+      this.$store.dispatch("addBook", book);
     },
     sortBooks() {
       this.$store.commit("sortBooksByTitle");

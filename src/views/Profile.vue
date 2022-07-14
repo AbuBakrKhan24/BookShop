@@ -1,24 +1,59 @@
 <template>
-  <div class="showReadingList">
-    {{ readingList }}
-
-    <button
-      @click="deleteReadingListItem(item)"
-      v-for="item of readingList"
-      :key="item"
-    >
-      Remove {{ item }}
-    </button>
+  <div class="display text-center">
+    <div class="details mt-5">
+      <img
+        class="profilepicture mt-5"
+        alt="profilepicture"
+        :src="user.avatar"
+      />
+      <h4 class="user mt-3 text-light">{{ user.username }}</h4>
+      <p class="email mt-2 text-light">{{ user.email }}</p>
+    </div>
   </div>
-  <div>
-    <button @click="updateUserInfo">EDIT PROFILE</button>
+  <div class="topbar">
+    <div class="container d-flex">
+      <h3>About</h3>
+      <button
+        type="button"
+        class="edit mt-4 btn btn-outline-secondary"
+        @click="updateUserInfo"
+      >
+        <i class="fa-solid fa-gear"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-4 info">
+      <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <p class="mt-2 text-dark">{{ user.location }}</p>
+      </div>
+      <div class="about">
+        <h4>Bio</h4>
+        <i class="fa-solid fa-user"></i>
+        <p class="mt-2 text-dark">{{ user.about }}</p>
+      </div>
+    </div>
+    <div class="col-8 ms-3 row d-flex">
+      <ReadingBookCard
+        v-for="book in readingList"
+        :key="book.id"
+        :book="book"
+      />
+    </div>
   </div>
 </template>
 <script>
+import ReadingBookCard from "../components/ReadingBookCard.vue";
 export default {
   computed: {
     readingList() {
       return this.$store.state.user.readingList;
+    },
+    user() {
+      console.log(this.$store.state.user);
+      return this.$store.state.user;
     },
   },
   methods: {
@@ -26,6 +61,7 @@ export default {
       this.$store.dispatch("removeReadingList", id);
     },
   },
+  components: { ReadingBookCard },
 };
 </script>
 <style>

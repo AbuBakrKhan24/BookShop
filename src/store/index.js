@@ -137,14 +137,14 @@ export default createStore({
 
     // PROFILE
     // ADD READING LIST
-    addReadingList: async (context, id) => {
-      context.state.user.readingList.push(id);
+    addReadingList: async (context, book) => {
+      context.state.user.readingList.push(book);
       context.dispatch("updateUserInfo", context.state.user);
     },
     // DELETE READING LIST ITEM
-    removeReadingList: async (context, id) => {
+    removeReadingList: async (context, book) => {
       context.state.user.readingList = context.state.user.readingList.filter(
-        (item) => item != id
+        (item) => item.id != book.id
       );
       context.dispatch("updateUserInfo", context.state.user);
     },

@@ -4,7 +4,7 @@
       "genre": "art",
       "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
       "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
-      "title": "Digital Colour in Graphic Design (Not for the colour blind)",
+      "title": "Digital Color in graphic design",
       "pages": "225",
       "tags": "design",
       "audience": "all",
@@ -894,6 +894,32 @@
       "audience": "all",
       "description": "When Feynman started this lecture series on astronomy as he referred to it, it really emphasized",
       "year": "2008"
+    },
+    {
+      "id": 71
+    },
+    {
+      "id": 72
+    },
+    {
+      "id": 73
+    },
+    {
+      "id": 74
+    },
+    {
+      "id": 75
+    },
+    {
+      "genre": "art",
+      "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
+      "cover": "https://edit.org/images/cat/book-covers-big-2019101610.jpg",
+      "title": "Jasons book of Jokes",
+      "pages": 1,
+      "tags": "parenting",
+      "description": "I got jokes",
+      "year": 2022,
+      "id": 76
     }
   ],
   "users": [

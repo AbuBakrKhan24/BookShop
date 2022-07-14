@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{ name: 'SingleBook', params: { id: book.id } }">
-    <div class="col-md-4">
+    <div class="col">
       <img :src="book.cover" style="height: 100px" />
       <div class="book-details">
         <h2>{{ book.title }}</h2>
