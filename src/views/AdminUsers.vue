@@ -2,8 +2,8 @@
   <div>
     <div class="user-display">
       <div class="user-display">
-        <table class="table">
-          <thead>
+        <table class="table table-hover table-bordered">
+          <thead id="thead">
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Email</th>
@@ -60,23 +60,6 @@ export default {
 };
 </script>
 <style>
-/* body {
-  background-image: linear-gradient(
-    to left bottom,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  );
-} */
 nav a.router-link-exact-active {
   color: blue;
 }
@@ -87,5 +70,12 @@ nav a.router-link-exact-active {
 }
 img {
   height: 100px;
+}
+
+@media screen and (max-width: 899) {
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

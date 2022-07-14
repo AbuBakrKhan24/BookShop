@@ -5,7 +5,7 @@
   <div>
     <!-- books table -->
     <div class="book-display" v-if="books">
-      <table class="table">
+      <table class="table table-hover table-bordered">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -71,23 +71,6 @@ export default {
 };
 </script>
 <style>
-/* body {
-  background-image: linear-gradient(
-    to left bottom,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  );
-} */
 nav a.router-link-exact-active {
   color: blue;
 }
