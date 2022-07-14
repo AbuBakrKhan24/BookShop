@@ -1,19 +1,6 @@
 {
   "books": [
     {
-      "id": 1,
-      "genre": "art",
-      "file": "https://johndisgrafico.files.wordpress.com/2011/09/small-size-drawing-the-human-body.pdf",
-      "cover": "https://cdn.asaha.com/assets/thumbs/40a/40a376954631afafa275af19fe6b3154.jpg",
-      "title": "Art of Drawing the Human Body",
-      "pages": "162",
-      "tags": "drawing",
-      "audience": "all",
-      "description": "We will show in this book that drawing the human body need not be so difficult.",
-      "year": "2007",
-      "createdBy": 1
-    },
-    {
       "id": 2,
       "createdBy": 1,
       "genre": "art",

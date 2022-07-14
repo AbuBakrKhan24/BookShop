@@ -1,5 +1,6 @@
 <template>
   <div class="container p-3">
+    <input type="text" v-model="search" />
     <div class="book-display row" v-if="books">
       <BookCard v-for="book in books" :key="book.id" :book="book" />
     </div>
@@ -15,6 +16,7 @@ export default {
       return this.$store.state.books;
     },
   },
+
   components: { BookCard },
 
   mounted() {

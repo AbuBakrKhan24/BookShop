@@ -27,20 +27,14 @@ export default createStore({
         `http://localhost:3000/users?email=${email}&password=${password}`
       );
       const userData = await response.json();
-      context.commit("setUser", userData[0]);
+      if (userData.length) return context.commit("setUser", userData[0]);
+      if (!userData.length) return alert("No user found");
     },
     // REGISTER USER
-    register: async (context, payload) => {
-      const { email, password, username, avatar, about } = payload;
+    register: async (context, user) => {
       fetch("`http://localhost:3000/users", {
         method: "POST",
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          username: username,
-          avatar: avatar,
-          about: about,
-        }),
+        body: JSON.stringify(user),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
@@ -66,8 +60,31 @@ export default createStore({
     },
 
     // ADD A BOOK
-    addBook: async (context, payload) => {
+    addBook: async (context, book) => {
+      fetch("http://localhost:3000/books", {
+        method: "POST",
+        body: JSON.stringify(book),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setBook", json));
+    },
+
+    // DELETE A BOOK
+    deleteBook: async (context, id) => {
+      fetch("http://localhost:3000/books/" + id, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((json) => context.dispatch("getBooks"));
+    },
+
+    // UPDATE A BOOK
+    updateBook: async (context, book) => {
       const {
+        id,
         genre,
         file,
         cover,
@@ -77,9 +94,9 @@ export default createStore({
         audience,
         description,
         year,
-      } = payload;
-      fetch("http://localhost:3000/books", {
-        method: "POST",
+      } = book;
+      fetch("http://localhost:3000/books/" + id, {
+        method: "PUT",
         body: JSON.stringify({
           genre: genre,
           file: file,
@@ -98,38 +115,33 @@ export default createStore({
         .then((response) => response.json())
         .then((json) => context.commit("setBook", json));
     },
-  },
 
-  // DELETE A BOOK
-  deleteBook: async (context, id) => {
-    fetch("http://localhost:3000/books/" + id, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then((json) => context.commit("setBook", json));
-  },
+    // PROFILE
+    // DELETE A USER
+    deleteUser: async (context, id) => {
+      fetch("http://localhost:3000/users/" + id, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json));
+    },
 
-  // UPDATE A BOOK
-  updateBook: async (context, id) => {
-    fetch("http://localhost:3000/books/" + id, {
-      method: "PUT",
-      body: JSON.stringify({
-        genre: genre,
-        file: file,
-        cover: cover,
-        title: title,
-        pages: pages,
-        tags: tags,
-        audience: audience,
-        description: description,
-        year: year,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => context.commit("setBook", json));
+    // UPDATE A USER
+    updateUserInfo: async (context, user) => {
+      const { about, location, id } = user;
+      fetch("http://localhost:3000/users/" + id, {
+        method: "PUT",
+        body: JSON.stringify({
+          about: about,
+          location: location,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json));
+    },
   },
   modules: {},
 });
