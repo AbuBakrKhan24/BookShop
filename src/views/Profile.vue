@@ -2,7 +2,7 @@
     <!-- <h1>This is profile page</h1> -->
     <div class="display text-center">
         <div class="details mt-5">
-            <img class="profilepicture mt-5" alt="Vue logo" src="../assets/books-2022463_1280.png">
+            <img class="profilepicture mt-5" alt="Vue logo" src="https://github.com/AbuBakrKhan24/BookShop/blob/Sindile/src/assets/books-2022463_1280.png?raw=true">
             <h4 class="user mt-3 text-light">Sindile Kula</h4>
             <p class="email mt-2 text-light">Kulasindile@gmail.com</p>
         </div>

@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="col">
-        <img alt="Vue logo" src="../assets/bookdom-removebg-preview.png" class="img-fluid">
+        <img alt="Vue logo" src="https://github.com/AbuBakrKhan24/BookShop/blob/Sindile/src/assets/bookdom-removebg-preview.png?raw=true" class="img-fluid">
       </div>
     </div>
   </div>
