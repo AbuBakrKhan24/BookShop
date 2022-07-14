@@ -2,9 +2,14 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: "/admin",
+    path: "/Admin",
     name: "Admin",
-    component: () => import("../views/AdminView.vue"),
+    component: () => import("../views/AdminBooks.vue"),
+  },
+  {
+    path: "/adminuser",
+    name: "adminuser",
+    component: () => import("../views/AdminUsers.vue"),
   },
 ];
 
