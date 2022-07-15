@@ -99,9 +99,8 @@ export default createStore({
     },
 
     // UPDATE A BOOK
-    updateBook: async (context, book) => {
+    updateBook: async (context, book, id) => {
       const {
-        id,
         genre,
         file,
         cover,
