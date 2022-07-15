@@ -1,5 +1,4 @@
 <template>
-  <p>This is the id {{ $route.params.id }}</p>
   <div v-if="book">
     <button
       @click="deleteBook(book.id)"
@@ -167,12 +166,13 @@
       <div class="singleBookCard">
         <img v-bind:src="book.cover" />
         <p>{{ book.title }}</p>
+        <a :href="book.file" target="_blank">Get Book</a>
+        <!-- <div v-html="book.file"></div> -->
       </div>
     </div>
-  </div>
-  <h4 class="text mb-5">These are related Books</h4>
-  <div class="container-similar d-flex">
-    <div v-for="book in similarBooks" :key="book.id" class="SimilarBooks">
+    <h4 class="text mb-5">These are related Books</h4>
+    <div class="container-similar d-flex">
+      <BookCard v-for="book in similarBooks" :key="book.id" :book="book" />
       <div class="cards">
         <div class="bookDetails">
           <img :src="book.cover" />
@@ -183,7 +183,10 @@
   </div>
 </template>
 <script>
+import BookCard from "../components/BookCard.vue";
+
 export default {
+  components: { BookCard },
   props: ["id"],
   computed: {
     book() {
@@ -226,6 +229,7 @@ export default {
       this.$store.dispatch("deleteBook", id);
     },
   },
+  components: { BookCard },
 };
 </script>
 <style>
