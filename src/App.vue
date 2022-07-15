@@ -18,15 +18,6 @@ export default {
 </script>
 
 <style>
-body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  background-color: #1b1b32;
-  color: #f5f6f7;
-  font-family: Tahoma;
-  font-size: 16px;
-}
 #app {
   /* height: 100vh; */
 
@@ -35,7 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #d16ba5,
     #c777b9,
@@ -49,7 +40,7 @@ body {
     #41dfff,
     #46eefa,
     #5ffbf1
-  );
+  ); */
 }
 
 /* nav {

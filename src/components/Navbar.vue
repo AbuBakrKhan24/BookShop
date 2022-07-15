@@ -79,6 +79,13 @@
                 Sign Up
               </router-link>
             </li>
+            <!-- <img
+              width="40"
+              height="35"
+              :src="user.avatar"
+              :alt="user.name"
+              class="d-inline-block align-text-top"
+            /> -->
           </div>
           <!-- Profile Page Done-->
         </ul>

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    <div class="container mt-5">
+    <div class="container">
       <div class="row">
         <div class="col">
           <h1>Hello there, we are BOOKDOM.</h1>
@@ -11,19 +11,44 @@
             writers through the power of story.
           </p>
 
-          <div class="buttons d-flex justify-content-center mt-5 mb-5">
-            <button
-              type="button"
-              class="read btn btn-lg ms-5 text-light rounded-pill"
+          <div
+            class="buttons d-flex justify-content-center mt-5 mb-5"
+            v-if="user"
+          >
+            <router-link to="/library"
+              ><button
+                type="button"
+                class="read btn btn-lg ms-5 text-light rounded-pill"
+              >
+                Start Reading
+              </button></router-link
             >
-              Start Reading
-            </button>
-            <button
-              type="button"
-              class="write btn btn-lg ms-5 text-light rounded-pill"
+            <router-link to="/library">
+              <button
+                type="button"
+                class="write btn btn-lg ms-5 text-light rounded-pill"
+              >
+                Start Writing
+              </button>
+            </router-link>
+          </div>
+          <div class="buttons d-flex justify-content-center mt-5 mb-5" v-else>
+            <router-link to="/login"
+              ><button
+                type="button"
+                class="read btn btn-lg ms-5 text-light rounded-pill"
+              >
+                Start Reading
+              </button></router-link
             >
-              Start Writing
-            </button>
+            <router-link to="/login">
+              <button
+                type="button"
+                class="write btn btn-lg ms-5 text-light rounded-pill"
+              >
+                Start Writing
+              </button>
+            </router-link>
           </div>
         </div>
         <div class="col">
@@ -57,14 +82,20 @@ export default {
   props: {
     msg: String,
   },
+  computed: {
+    user() {
+      console.log(this.$store.state.user);
+      return this.$store.state.user;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container {
+/* .container {
   margin-bottom: 5%;
-}
+} */
 
 .col h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -81,8 +112,23 @@ export default {
 }
 
 .hello {
-  /* padding-top: 10px; */
-  margin-top: 5%;
+  padding-top: 8%;
+  height: 89vh;
+  background-image: linear-gradient(
+    to left bottom,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 
 img {
@@ -105,11 +151,13 @@ button.write:hover {
   background-color: rgba(81, 153, 252);
 }
 
-#footer {
+#footer[data-v-98feeed2] {
   height: 100px;
+  width: 100%;
   /* background-color: grey; */
   background-color: rgba(0, 0, 0, 0.367);
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 
 @media only screen and (max-width: 992px) {

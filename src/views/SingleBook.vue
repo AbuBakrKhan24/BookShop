@@ -1,10 +1,10 @@
 <template>
-  <p>This is the id {{ $route.params.id }}</p>
-  <div v-if="book">
-    <div class="buttons">
+  <!-- <p>This is the id {{ $route.params.id }}</p> -->
+  <div v-if="book" class="div">
+    <div class="buttons mt-5">
       <button
         type="button"
-        class="btn btn-outline-secondary"
+        class="btn btn-outline-light"
         @click="deleteBook(book.id)"
         v-if="book.createdBy === user.id"
       >
@@ -159,15 +159,34 @@
     </div>
     <button
       type="button"
-      class="btn btn-outline-secondary"
+      class="btn btn-outline-light mb-5"
       @click="addReadingList(book)"
       v-if="user"
     >
       Read this
     </button>
-    <div class="singleBookCard">
-      <img v-bind:src="book.cover" />
-      <p>{{ book.title }}</p>
+    <div
+      class="container-fluid d-flex justify-content-center align-text-center"
+    >
+      <div class="singleBookCard mb-2">
+        <img v-bind:src="book.cover" />
+        <h3 class="mt-2">{{ book.title }}</h3>
+      </div>
+    </div>
+
+    <div class="container-similar d-flex">
+      <div
+        v-for="book in similarBooks"
+        :key="book.id"
+        class="SimilarBooks mt-2"
+      >
+        <div class="cards">
+          <div class="bookDetails">
+            <img :src="book.cover" />
+            <p>{{ book.title }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -182,6 +201,11 @@ export default {
     user() {
       console.log(this.$store.state.user);
       return this.$store.state.user;
+    },
+    similarBooks() {
+      return this.$store.state.books?.filter((book) => {
+        return book?.genre === this.book?.genre;
+      });
     },
   },
   mounted() {
@@ -213,7 +237,44 @@ export default {
 };
 </script>
 <style>
-.singleBookCard {
+body {
+  overflow-x: hidden;
+}
+.container-similar {
+  background-color: white;
+}
+img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.cards {
+  /* box-shadow: black 1px, 1px; */
+  display: flex;
+  padding: 2px;
+  border-radius: 4%;
+  flex-direction: row;
+  margin-bottom: 100px;
+  padding: 10px;
+  width: fit-content;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.text {
+  text-decoration: underline;
+}
+.div {
+  height: 85vh;
+}
+
+.container {
   height: 79vh;
+}
+.singleBookCard {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4%;
 }
 </style>

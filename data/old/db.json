@@ -1,30 +1,43 @@
 {
   "books": [
     {
+      "id": 1,
+      "genre": "art",
+      "file": "https://johndisgrafico.files.wordpress.com/2011/09/small-size-drawing-the-human-body.pdf",
+      "cover": "https://cdn.asaha.com/assets/thumbs/40a/40a376954631afafa275af19fe6b3154.jpg",
+      "title": "Art of Drawing the Human Body",
+      "pages": "162",
+      "tags": "drawing",
+      "audience": "all",
+      "description": "We will show in this book that drawing the human body need not be so difficult.",
+      "year": "2007",
+      "createdBy": 1
+    },
+    {
+      "id": 2,
+      "createdBy": 1,
       "genre": "art",
       "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
       "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
-      "title": "Digital Color in graphic design",
+      "title": "Digital Colour in Graphic Design",
       "pages": "225",
       "tags": "design",
       "audience": "all",
-      "description": "Showing how the use of colour greatly produce spots of colour,",
-      "year": "2012",
-      "createdBy": 1,
-      "id": 2
+      "description": "Digital Graphic Design, showing how the use of colour greatly produce spots of colour,",
+      "year": "2012"
     },
     {
-      "genre": "art",
+      "id": 3,
       "createdBy": 1,
+      "genre": "art",
       "file": "https://www.pdfdrive.com/mastering-photoshop-for-web-design-d8109058.html",
       "cover": "https://cdn.asaha.com/assets/thumbs/bb3/bb394f5e6d24d9e18a574df6a70a22a3.jpg",
-      "title": "Mastering Photoshop for Web Designers",
+      "title": "Mastering Photoshop for Web Design",
       "pages": "216",
       "tags": "design",
       "audience": "all",
       "description": "details such as subtle textures, shading and smooth shapes.",
-      "year": "2011",
-      "id": 3
+      "year": "2011"
     },
     {
       "id": 4,
@@ -894,44 +907,12 @@
       "audience": "all",
       "description": "When Feynman started this lecture series on astronomy as he referred to it, it really emphasized",
       "year": "2008"
-    },
-    {
-      "id": 71
-    },
-    {
-      "id": 72
-    },
-    {
-      "id": 73
-    },
-    {
-      "id": 74
-    },
-    {
-      "id": 75
-    },
-    {
-      "genre": "art",
-      "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
-      "cover": "https://edit.org/images/cat/book-covers-big-2019101610.jpg",
-      "title": "Jasons book of Jokes",
-      "pages": 1,
-      "tags": "parenting",
-      "description": "I got jokes",
-      "year": 2022,
-      "id": 76
     }
   ],
   "users": [
     {
-      "email": "a@a.com",
-      "password": "pass1",
-      "username": "ThisWasAlice",
-      "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/1.png?raw=true",
-      "readingList": [],
+      "about": "Book worm ",
       "location": "Cape Town, South Africa",
-      "about": "Book Nerd",
-      "role": "creator",
       "id": 1
     },
     {
@@ -940,7 +921,8 @@
       "password": "password2",
       "username": "brendafassie",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/14.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Atlana, United States of America",
       "about": "Foodie",
       "role": "creator"
@@ -951,7 +933,8 @@
       "password": "password3",
       "username": "catherinejones",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Budapest, Hungary",
       "about": "Part time writer",
       "role": "creator"
@@ -962,35 +945,23 @@
       "password": "password4",
       "username": "devonfredricks",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "New Delhi, India",
       "about": "Lover of writing",
       "role": "creator"
     },
     {
+      "id": 5,
       "email": "eugene@gmail.com",
       "password": "password5",
       "username": "eugeneappolis",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": [
-        {
-          "id": 8,
-          "createdBy": 1,
-          "genre": "education",
-          "file": "https://www.pdfdrive.com/100-great-business-ideas-e34385361.html",
-          "cover": "https://cdn.asaha.com/assets/thumbs/558/558dd44c614e08fdaed752bb35e28c3b.jpg",
-          "title": "100 great business ideas",
-          "pages": "241",
-          "tags": "economy",
-          "audience": "all",
-          "description": "Acknowledgments",
-          "year": "2009"
-        }
-      ],
+      "readingList": "",
+      "works": "",
       "location": "Sydney, Australia",
       "about": "I enjoy sunlight, reading and knitting",
-      "role": "creator",
-      "id": 5
+      "role": "creator"
     },
     {
       "id": 6,
@@ -998,7 +969,8 @@
       "password": "password6",
       "username": "fredsmith",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Auckland, New Zealand",
       "about": "I enjoy creating my own world through writing",
       "role": "creator"
@@ -1009,7 +981,8 @@
       "password": "password7",
       "username": "greghunter",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Johannesburg, South Africa",
       "about": "I hope to let others see my big world through my writing",
       "role": "creator"
@@ -1020,7 +993,8 @@
       "password": "password8",
       "username": "hughjackman",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/4.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Windhoek, Nambia",
       "about": "My creativity is fueled by coffee",
       "role": "creator"
@@ -1031,48 +1005,23 @@
       "password": "password9",
       "username": "islarhodes",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/6.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Nairobi, Kenya",
       "about": "A kidnapper could catch me by offering me free library access",
       "role": "creator"
     },
     {
+      "id": 10,
       "email": "janet@gmail.com",
       "password": "password10",
       "username": "janetjackson",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": [
-        {
-          "id": 68,
-          "createdBy": 6,
-          "genre": "science",
-          "file": "https://www.pdfdrive.com/the-quantum-structure-of-space-and-time-e33588922.html",
-          "cover": "https://cdn.asaha.com/assets/thumbs/887/88793fb2bbc1b5da69b08e0aedda326b.jpg",
-          "title": "The quantum structure od space and time",
-          "pages": "295",
-          "tags": "biology",
-          "audience": "all",
-          "description": "Proceedings of the 23rd Solvay Conference on Physics",
-          "year": "2007"
-        },
-        {
-          "genre": "art",
-          "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
-          "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
-          "title": "Digital Color in graphic design",
-          "pages": "225",
-          "tags": "design",
-          "audience": "all",
-          "description": "Showing how the use of colour greatly produce spots of colour,",
-          "year": "2012",
-          "createdBy": 1,
-          "id": 2
-        }
-      ],
+      "readingList": "",
+      "works": "",
       "location": "New York, United States of America",
       "about": "Books over boys, PERIODT",
-      "role": "creator",
-      "id": 10
+      "role": "creator"
     },
     {
       "id": 11,
@@ -1080,35 +1029,48 @@
       "password": "passwordzoe",
       "username": "zoevds",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/13.png?raw=true",
-      "readingList": [],
+      "readingList": "",
+      "works": "",
       "location": "Ottowa, Canada",
       "about": "Seriously, hopelessly obsessed with crime books. ",
       "role": "admin"
     },
     {
-      "email": "jason@gmail.com",
-      "password": "goat",
-      "username": "jasonisthegoat",
-      "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
-      "readingList": [
-        {
-          "genre": "art",
-          "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
-          "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
-          "title": "Digital Color in graphic design",
-          "pages": "225",
-          "tags": "design",
-          "audience": "all",
-          "description": "Showing how the use of colour greatly produce spots of colour,",
-          "year": "2012",
-          "createdBy": 1,
-          "id": 2
-        }
-      ],
-      "location": "NeoTokyo, New Japan",
-      "about": "I am the God",
-      "role": "creator",
+      "username": "username",
+      "email": "email",
+      "password": "password",
+      "avatar": "avatar",
       "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "username": "Jason",
+      "email": "jason@gmail.com",
+      "password": "password1001",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/20.png?raw=true"
+      ],
+      "id": 14
+    },
+    {
+      "username": "Mika",
+      "email": "mika@gmail.com",
+      "password": "whyisabugay",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true"
+      ],
+      "id": 15
+    },
+    {
+      "username": "Mika",
+      "email": "mika@gmail.com",
+      "password": "whyisabugay",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/10.png?raw=true"
+      ],
+      "id": 16
     }
   ],
   "library": [],

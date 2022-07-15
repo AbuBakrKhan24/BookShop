@@ -1,6 +1,6 @@
 <template>
   <div class="display text-center">
-    <div class="details mt-5">
+    <div class="details">
       <img
         class="profilepicture mt-5"
         alt="profilepicture"
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="topbar">
-    <div class="about-container m-5">
+    <div class="about-container">
       <h3>About</h3>
       <!-- Button trigger modal -->
       <button
@@ -49,7 +49,7 @@
                     type="text"
                     class="form-control"
                     id="floatingLocation"
-                    v-model="location"
+                    v-model="user.location"
                   />
                   <label for="floatingInput">Location</label>
                 </div>
@@ -58,7 +58,7 @@
                     type="text"
                     class="form-control"
                     id="floatingABout"
-                    v-model="about"
+                    v-model="user.about"
                   />
                   <label for="floatingPassword">Describe Yourself</label>
                 </div>
@@ -99,12 +99,14 @@
     </div>
     <!-- READINGLIST -->
     <div class="col-8 ms-3 row d-flex p-3 mt-2">
-      <div><h4 class="">YOUR READING LIST</h4></div>
-      <ReadingBookCard
-        v-for="book in readingList"
-        :key="book.id"
-        :book="book"
-      />
+      <div>
+        <h4 class="">YOUR READING LIST</h4>
+        <ReadingBookCard
+          v-for="book in readingList"
+          :key="book.id"
+          :book="book"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -132,26 +134,26 @@ export default {
 };
 </script>
 <style>
+.card {
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
 .display {
   height: 50vh;
   width: 100vw;
   background-color: rgb(56, 52, 52);
 }
-
 .profilepicture {
   width: 100px;
   height: 100px;
   border: solid 2px white;
   border-radius: 10px;
 }
-
 .topbar {
   width: 100vw;
   height: 80px;
   background-color: white;
   border-bottom: solid 2px black;
 }
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -161,23 +163,21 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  padding-left: 5%;
 }
-
 .col-4 {
   height: 200px;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
   border: solid 1px grey;
   background-color: white;
 }
-
 .col-8 {
   min-height: 285px;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
   border: solid 1px grey;
   background-color: white;
 }
-
 a {
   text-decoration: none;
   color: black;
@@ -189,5 +189,16 @@ a {
     flex-direction: column;
     align-items: center;
   }
+  .col-4 {
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 20px;
+  }
+}
+
+.col-8 {
+  height: fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
 }
 </style>

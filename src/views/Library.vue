@@ -4,11 +4,11 @@
       <div
         class="sort-options d-flex justify-content-center align-itens-center"
       >
-        <button class="btn btn-outline-light" @click="sortBooks">
+        <button class="btn btn-outline-dark ms-5" @click="sortBooks">
           Sort By Title
         </button>
-        <input type="text" v-model="search" placeholder="Search" />
-        <select v-model="genre">
+        <input class="ms-5" type="text" v-model="search" placeholder="Search" />
+        <select v-model="genre" class="ms-3">
           <option value="all">All</option>
           <option value="art">Art</option>
           <option value="education">Education</option>
