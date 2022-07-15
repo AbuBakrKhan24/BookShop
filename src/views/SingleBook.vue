@@ -171,11 +171,13 @@
     </div>
   </div>
   <h4 class="text mb-5">These are related Books</h4>
-  <div v-for="book in similarBooks" :key="book.id" class="SimilarBooks">
-    <div class="cards">
-      <div class="bookDetails">
-        <img :src="book.cover" />
-        <p>{{ book.title }}</p>
+  <div class="container-similar d-flex">
+    <div v-for="book in similarBooks" :key="book.id" class="SimilarBooks">
+      <div class="cards">
+        <div class="bookDetails">
+          <img :src="book.cover" />
+          <p>{{ book.title }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -232,11 +234,13 @@ export default {
   flex-direction: row;
   flex-wrap: wrap; */
 }
-
+img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 .SimilarBooks {
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
 }
 
 .cards {
