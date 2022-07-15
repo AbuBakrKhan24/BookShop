@@ -99,12 +99,14 @@
     </div>
     <!-- READINGLIST -->
     <div class="col-8 ms-3 row d-flex p-3 mt-2">
-      <div><h4 class="">YOUR READING LIST</h4></div>
-      <ReadingBookCard
-        v-for="book in readingList"
-        :key="book.id"
-        :book="book"
-      />
+      <div>
+        <h4 class="">YOUR READING LIST</h4>
+        <ReadingBookCard
+          v-for="book in readingList"
+          :key="book.id"
+          :book="book"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -189,6 +191,9 @@ a {
   }
 
   .col-4 {
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 20px;
   }
 }
 </style>

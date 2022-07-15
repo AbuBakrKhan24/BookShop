@@ -163,9 +163,20 @@
     >
       Read this
     </button>
-    <div class="singleBookCard">
-      <img v-bind:src="book.cover" />
-      <p>{{ book.title }}</p>
+    <div class="cards mt-5">
+      <div class="singleBookCard">
+        <img v-bind:src="book.cover" />
+        <p>{{ book.title }}</p>
+      </div>
+    </div>
+  </div>
+  <h4 class="text mb-5">These are related Books</h4>
+  <div v-for="book in similarBooks" :key="book.id" class="SimilarBooks">
+    <div class="cards">
+      <div class="bookDetails">
+        <img :src="book.cover" />
+        <p>{{ book.title }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -180,6 +191,11 @@ export default {
     user() {
       console.log(this.$store.state.user);
       return this.$store.state.user;
+    },
+    similarBooks() {
+      return this.$store.state.books?.filter((book) => {
+        return book?.genre === this.book?.genre;
+      });
     },
   },
   mounted() {
@@ -210,4 +226,31 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.bookDetails {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+}
+
+.SimilarBooks {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.cards {
+  border: solid 2px black;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+  padding: 10px;
+  margin-left: 100px;
+  width: fit-content;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  text-decoration: underline;
+}
+</style>
