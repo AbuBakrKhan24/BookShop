@@ -384,7 +384,7 @@
 </template>
 
 <script>
-import BookCard from "../components/BookCard.vue";
+import BookCard from "../components/Book_Card.vue";
 export default {
   props: ["id"],
   computed: {

@@ -56,7 +56,7 @@
                       >
                         <i class="fa-solid fa-pen edit"></i>
                       </button>
-                      <!-- Modal 2-->
+                      <!-- Modal -->
                       <div class="modal fade" id="editmodal" tabindex="-1">
                         <div class="modal-dialog">
                           <div class="modal-content">
