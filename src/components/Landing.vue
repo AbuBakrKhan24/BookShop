@@ -120,6 +120,41 @@ button.write:hover {
   background-color: rgba(0,0,0,.367);
   position: relative;
 }
+
+@media only screen and (max-width: 992px){
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-left: -20px;
+
+  }
+
+  .col {
+    margin-top: 40px;
+}
+
+  .read {
+    margin-bottom: 10px;
+    width: 200px;
+  }
+
+  .write {
+    width: 200px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-fluid {
+    margin-bottom: 20px;
+    height: 20vh;
+  }
+}
 /* h3 {
   margin: 40px 0 0;
 }
