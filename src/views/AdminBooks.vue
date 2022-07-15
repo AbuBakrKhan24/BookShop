@@ -216,7 +216,7 @@
                 <div class="col">
                   <button
                     type="button"
-                    class="btn btn-outline-light"
+                    class="btn"
                     data-bs-toggle="modal"
                     data-bs-target="#editmodal"
                   >

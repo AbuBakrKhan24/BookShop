@@ -29,14 +29,20 @@
               <td>{{ user.about }}</td>
               <td>{{ user.role }}</td>
               <td>
-                <div class="edit_buttons">
-                  <i class="fa-solid fa-trash bin"></i
-                  ><i
-                    class="fa-solid fa-pen edit"
-                    onclick="editProperty(${
+                <div class="container">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      <button class="btn" @click="deleteBook(book.id)">
+                        <i class="fa-solid fa-trash bin"></i>
+                      </button>
+                    </div>
+                    <i
+                      class="fa-solid fa-pen edit"
+                      onclick="editProperty(${
                     properties.id
                 });"
-                  ></i>
+                    ></i>
+                  </div>
                 </div>
               </td>
             </tr>
