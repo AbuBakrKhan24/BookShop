@@ -14,7 +14,7 @@ const routes = [
     component: () => import("../views/LoginView.vue"),
   },
   {
-    path: "/home",
+    path: "/",
     name: "HomeView",
 
     component: () => import("../views/HomeView.vue"),
@@ -29,6 +29,11 @@ const routes = [
     name: "SingleBook",
     component: () => import("../views/SingleBook.vue"),
     props: true,
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: () => import("../views/Profile.vue"),
   },
 ];
 

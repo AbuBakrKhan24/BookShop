@@ -1,5 +1,5 @@
 <template>
-  <div class="Form_Holder">
+  <div class="Form_Holder mt-5">
     <div class="card" style="width: fit-content">
       <div class="card-body">
         <svg

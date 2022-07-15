@@ -1,18 +1,21 @@
 <template>
-  <!-- <router-link :to="{ name: 'SingleBook', params: { id: book.id } }"> -->
-  <div class="col-lg-4 col-md-6 col-sm-12 book_holder">
-    <!-- <img :src="book.cover" style="height: 100px" />
+  <!-- <img :src="book.cover" style="height: 100px" />
     <div class="book-details">
       <h5>{{ book.title }}</h5>
       <p>{{ book.description }}</p>
       <p>{{ book.tags }}</p>
     </div> -->
+  <div class="col-lg-4 col-md-6 col-sm-12 book_holder">
     <main>
       <div class="book-card">
         <div class="book-card__cover">
           <div class="book-card__book">
             <div class="book-card__book-front">
-              <img class="book-card__img" :src="book.cover" />
+              <router-link
+                :to="{ name: 'SingleBook', params: { id: book.id } }"
+              >
+                <img class="book-card__img" :src="book.cover" />
+              </router-link>
             </div>
             <div class="book-card__book-back"></div>
             <div class="book-card__book-side"></div>
@@ -28,7 +31,6 @@
       </div>
     </main>
   </div>
-  <!-- </router-link> -->
 </template>
 <script>
 export default {

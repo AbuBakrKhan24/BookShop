@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="Form_Holder">
+    <div class="Form_Holder mt-5">
       <div class="card" style="width: fit-content">
         <form @submit.prevent="login">
           <p>Log in to Bookdom</p>
@@ -27,7 +27,7 @@
         <!-- <div v-else class="error">Error Credentials Does Not Match!</div> -->
         <footer>
           Don't have an account?
-          <router-link to="/">Sign Up</router-link>
+          <router-link to="/signup">Sign Up</router-link>
         </footer>
       </div>
     </div>
@@ -131,7 +131,7 @@ input[type="submit"] {
   font-size: 1.1rem;
   // background-color: #3b3b4f;
   // /* border-color: white; */
-  min-width: 300px;
+  // min-width: 300px;
 }
 
 input[type="submit"]:focus {

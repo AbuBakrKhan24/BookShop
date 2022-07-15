@@ -1,13 +1,6 @@
 <template>
-  <Navbar />
-  <nav>
-    <router-link to="/signup">Sign Up</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/home">Home</router-link> |
-    <router-link to="/library">Library</router-link> |
+  <Navbar></Navbar>
 
-    <router-link to="/profile">Profile</router-link>
-  </nav>
   <router-view />
 </template>
 
@@ -59,14 +52,14 @@ body {
   );
 }
 
-nav {
+/* nav {
   padding: 30px;
 }
 
 nav a {
   font-weight: bold;
   color: #2c3e50;
-}
+} */
 
 nav a.router-link-exact-active {
   color: #ffffff;

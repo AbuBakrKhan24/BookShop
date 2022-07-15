@@ -1,20 +1,27 @@
 <template>
   <p>This is the id {{ $route.params.id }}</p>
   <div v-if="book">
-    <button @click="deleteBook(book.id)" v-if="book.createdBy === user.id">
-      Delete
-    </button>
+    <div class="buttons">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        @click="deleteBook(book.id)"
+        v-if="book.createdBy === user.id"
+      >
+        Delete
+      </button>
 
-    <!-- Button trigger modal -->
-    <button
-      v-if="book.createdBy === user.id"
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Edit
-    </button>
+      <!-- Button trigger modal   -->
+      <button
+        v-if="book.createdBy === user.id"
+        type="button"
+        class="btn btn-light-outilne"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Edit
+      </button>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1">
@@ -102,7 +109,7 @@
                   <option value="drawing">Drawing</option>
                   <option value="design">Design</option>
                   <option value="programming">Programming</option>
-                  <option value="self-environment">Self-environment</option>
+                  <option value="self-improvement">Self-environment</option>
                   <option value="economy">Economy</option>
                   <option value="biology">Biology</option>
                   <option value="inspirational">Inspirational</option>
@@ -150,7 +157,14 @@
         </div>
       </div>
     </div>
-    <button @click="addReadingList(id)" v-if="user">Read this</button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      @click="addReadingList(book)"
+      v-if="user"
+    >
+      Read this
+    </button>
     <div class="singleBookCard">
       <img v-bind:src="book.cover" />
       <p>{{ book.title }}</p>
@@ -189,8 +203,8 @@ export default {
     updateBook() {
       this.$store.dispatch("updateBook", this.book);
     },
-    addReadingList(id) {
-      this.$store.dispatch("addReadingList", id);
+    addReadingList(book) {
+      this.$store.dispatch("addReadingList", book);
     },
     deleteBook(id) {
       this.$store.dispatch("deleteBook", id);
@@ -198,4 +212,8 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.singleBookCard {
+  height: 79vh;
+}
+</style>

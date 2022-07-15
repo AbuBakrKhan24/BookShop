@@ -1,5 +1,5 @@
 <template>
-    <div id="footer" class="">
+  <div id="footer" class="">
     <div class="container d-flex justify-content-between">
       <p class="footer-text mt-5">© 2022 BOOKDOM</p>
       <ul class="icons mt-5 d-flex">
@@ -12,15 +12,13 @@
   </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
 <style>
 #footer {
   height: 100px;
   /* background-color: grey; */
-  background-color: rgba(0,0,0,.367);
+  background-color: rgba(0, 0, 0, 0.367);
   position: relative;
 }
 </style>

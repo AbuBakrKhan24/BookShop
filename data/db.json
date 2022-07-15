@@ -911,16 +911,9 @@
   ],
   "users": [
     {
-      "id": 1,
-      "email": "alice@gmail.com",
-      "password": "password1",
-      "username": "alicejohnson",
-      "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/18.png?raw=true",
-      "readingList": "",
-      "works": "",
-      "location": "Cape Town, South Africa",
       "about": "Book worm ",
-      "role": "creator"
+      "location": "Cape Town, South Africa",
+      "id": 1
     },
     {
       "id": 2,
@@ -1050,12 +1043,6 @@
       "id": 12
     },
     {
-      "username": "Abu",
-      "email": "abubakrkhan224@gmail.com",
-      "password": "password100",
-      "avatar": [
-        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/2.png?raw=true"
-      ],
       "id": 13
     },
     {
