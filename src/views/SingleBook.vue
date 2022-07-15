@@ -102,7 +102,7 @@
                   <option value="drawing">Drawing</option>
                   <option value="design">Design</option>
                   <option value="programming">Programming</option>
-                  <option value="self-environment">Self-environment</option>
+                  <option value="self-improvement">Self-environment</option>
                   <option value="economy">Economy</option>
                   <option value="biology">Biology</option>
                   <option value="inspirational">Inspirational</option>

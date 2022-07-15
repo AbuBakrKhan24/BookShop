@@ -968,15 +968,29 @@
       "role": "creator"
     },
     {
-      "id": 5,
       "email": "eugene@gmail.com",
       "password": "password5",
       "username": "eugeneappolis",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": [],
+      "readingList": [
+        {
+          "id": 8,
+          "createdBy": 1,
+          "genre": "education",
+          "file": "https://www.pdfdrive.com/100-great-business-ideas-e34385361.html",
+          "cover": "https://cdn.asaha.com/assets/thumbs/558/558dd44c614e08fdaed752bb35e28c3b.jpg",
+          "title": "100 great business ideas",
+          "pages": "241",
+          "tags": "economy",
+          "audience": "all",
+          "description": "Acknowledgments",
+          "year": "2009"
+        }
+      ],
       "location": "Sydney, Australia",
       "about": "I enjoy sunlight, reading and knitting",
-      "role": "creator"
+      "role": "creator",
+      "id": 5
     },
     {
       "id": 6,
@@ -1023,15 +1037,42 @@
       "role": "creator"
     },
     {
-      "id": 10,
       "email": "janet@gmail.com",
       "password": "password10",
       "username": "janetjackson",
       "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/12.png?raw=true",
-      "readingList": [],
+      "readingList": [
+        {
+          "id": 68,
+          "createdBy": 6,
+          "genre": "science",
+          "file": "https://www.pdfdrive.com/the-quantum-structure-of-space-and-time-e33588922.html",
+          "cover": "https://cdn.asaha.com/assets/thumbs/887/88793fb2bbc1b5da69b08e0aedda326b.jpg",
+          "title": "The quantum structure od space and time",
+          "pages": "295",
+          "tags": "biology",
+          "audience": "all",
+          "description": "Proceedings of the 23rd Solvay Conference on Physics",
+          "year": "2007"
+        },
+        {
+          "genre": "art",
+          "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
+          "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
+          "title": "Digital Color in graphic design",
+          "pages": "225",
+          "tags": "design",
+          "audience": "all",
+          "description": "Showing how the use of colour greatly produce spots of colour,",
+          "year": "2012",
+          "createdBy": 1,
+          "id": 2
+        }
+      ],
       "location": "New York, United States of America",
       "about": "Books over boys, PERIODT",
-      "role": "creator"
+      "role": "creator",
+      "id": 10
     },
     {
       "id": 11,
@@ -1043,6 +1084,31 @@
       "location": "Ottowa, Canada",
       "about": "Seriously, hopelessly obsessed with crime books. ",
       "role": "admin"
+    },
+    {
+      "email": "jason@gmail.com",
+      "password": "goat",
+      "username": "jasonisthegoat",
+      "avatar": "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/15.png?raw=true",
+      "readingList": [
+        {
+          "genre": "art",
+          "file": "https://www.pdfdrive.com/digital-colour-in-graphic-design-d28864279.html",
+          "cover": "https://cdn.asaha.com/assets/thumbs/1b2/1b2e9f93d4796ec92567890849162df2.jpg",
+          "title": "Digital Color in graphic design",
+          "pages": "225",
+          "tags": "design",
+          "audience": "all",
+          "description": "Showing how the use of colour greatly produce spots of colour,",
+          "year": "2012",
+          "createdBy": 1,
+          "id": 2
+        }
+      ],
+      "location": "Tokyo, Japan",
+      "about": "I am a God",
+      "role": "creator",
+      "id": 12
     }
   ],
   "library": [],

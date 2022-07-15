@@ -1,13 +1,21 @@
 <template>
-  <div class="col-md-6 card">
+  <div class="col-md-4 p-3 card d-flex justify-content-between">
     <img :src="book.cover" style="height: 100px" />
     <div class="book-details">
-      <p>{{ book.title }}</p>
-      <p>{{ book.description }}</p>
-      <p>{{ book.tags }}</p>
-      <button @click="deleteReadingListItem(book)">
+      <h4>{{ book.title }}</h4>
+    </div>
+    <div class="btn-group d-flex">
+      <button
+        @click="deleteReadingListItem(book)"
+        class="btn btn-outline-secondary"
+      >
         <i class="fa-solid fa-trash"></i>
       </button>
+      <router-link :to="{ name: 'SingleBook', params: { id: book.id } }"
+        ><button class="btn btn-outline-secondary">
+          View Details
+        </button></router-link
+      >
     </div>
   </div>
 </template>
@@ -21,7 +29,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 img {
   object-fit: cover;
 }

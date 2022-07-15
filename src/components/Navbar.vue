@@ -1,7 +1,5 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-
     <div v-if="user">
       <router-link to="/library">Library</router-link> |
       <router-link to="/profile">Profile</router-link> |
