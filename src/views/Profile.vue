@@ -1,8 +1,8 @@
 <template>
     <!-- <h1>This is profile page</h1> -->
     <div class="display text-center">
-        <div class="details mt-5">
-            <img class="profilepicture mt-5" alt="Vue logo" src="https://github.com/AbuBakrKhan24/BookShop/blob/Sindile/src/assets/books-2022463_1280.png?raw=true">
+        <div class="details">
+            <img class="profilepicture mt-2" alt="Vue logo" src="https://github.com/AbuBakrKhan24/BookShop/blob/Sindile/src/assets/books-2022463_1280.png?raw=true">
             <h4 class="user mt-3 text-light">Sindile Kula</h4>
             <p class="email mt-2 text-light">Kulasindile@gmail.com</p>
         </div>
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container p-2" id="box">
        <div class="col-4 "></div>
        <div class="col-8 ms-3"></div>
     </div>
@@ -36,6 +36,10 @@ export default {
 </script>
 <style>
    .display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 50vh;
     width: 100vw;
     background-color: rgb(56, 52, 52);
@@ -76,6 +80,21 @@ export default {
    a {
     text-decoration: none;
     color: black;
+   }
+
+   @media only screen and (max-width: 580px){
+    .container#box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .col-4{
+        margin-bottom: 30px;
+        flex-grow: inherit;
+    }
    }
 
 </style>
