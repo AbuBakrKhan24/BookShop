@@ -187,5 +187,8 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
+  .col-4 {
+  }
 }
 </style>

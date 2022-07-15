@@ -1,7 +1,25 @@
 <template>
   <div class="container p-3">
-    <div class="book-display row" v-if="books">
+    <div class="book-display row" v-if="filteredBooks">
       <button @click="sortBooks">Sort By Title</button>
+      <input type="text" v-model="search" placeholder="Search" />
+      <select v-model="genre">
+        <option value="all">All</option>
+        <option value="art">Art</option>
+        <option value="education">Education</option>
+        <option value="biography">Biography</option>
+        <option value="business">Business</option>
+        <option value="child & youth">Child & youth</option>
+        <option value="environment">Environment</option>
+        <option value="health">Health</option>
+        <option value="fiction & literature">Fiction & Literature</option>
+        <option value="personal growth">Personal Growth</option>
+        <option value="lifestyle">Lifestyle</option>
+        <option value="religion">Religion</option>
+        <option value="law">Law</option>
+        <option value="technology">Technology</option>
+        <option value="science">Science</option>
+      </select>
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -152,7 +170,7 @@
         </div>
       </div>
 
-      <BookCard v-for="book in books" :key="book.id" :book="book" />
+      <BookCard v-for="book of filteredBooks" :key="book.id" :book="book" />
     </div>
   </div>
 </template>
@@ -166,6 +184,15 @@ export default {
       console.log(this.$store.state.books);
       return this.$store.state.books;
     },
+    filteredBooks() {
+      return this.$store.state.books?.filter((book) => {
+        let isMatch = true;
+        if (!book.title?.toLowerCase().includes(this.search.toLowerCase()))
+          isMatch = false;
+        if (this.genre !== "all" && book.genre !== this.genre) isMatch = false;
+        return isMatch;
+      });
+    },
   },
 
   components: { BookCard },
@@ -175,7 +202,8 @@ export default {
   },
   data() {
     return {
-      genre: "",
+      search: "",
+      genre: "all",
       file: "",
       cover: "",
       title: "",
