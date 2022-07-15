@@ -1,7 +1,11 @@
 <template>
   <p>This is the id {{ $route.params.id }}</p>
   <div v-if="book">
-    <button @click="deleteBook(book.id)" v-if="book.createdBy === user.id">
+    <button
+      @click="deleteBook(book.id)"
+      v-if="book.createdBy === user.id"
+      class="btn btn-outline-secondary"
+    >
       Delete
     </button>
 
@@ -9,7 +13,7 @@
     <button
       v-if="book.createdBy === user.id"
       type="button"
-      class="btn btn-primary"
+      class="btn btn-outline-secondary"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -134,14 +138,16 @@
                 />
                 <label for="floatingPassword">Cover</label>
               </div>
-              <button type="submit">Save</button>
+              <button type="submit" class="btn btn-outline-secondary">
+                Save
+              </button>
             </form>
           </div>
 
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-secondary"
               data-bs-dismiss="modal"
             >
               Close
@@ -150,7 +156,13 @@
         </div>
       </div>
     </div>
-    <button @click="addReadingList(book)" v-if="user">Read this</button>
+    <button
+      @click="addReadingList(book)"
+      v-if="user"
+      class="btn btn-outline-secondary"
+    >
+      Read this
+    </button>
     <div class="singleBookCard">
       <img v-bind:src="book.cover" />
       <p>{{ book.title }}</p>
