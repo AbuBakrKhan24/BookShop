@@ -49,7 +49,7 @@
                     type="text"
                     class="form-control"
                     id="floatingLocation"
-                    v-model="location"
+                    v-model="user.location"
                   />
                   <label for="floatingInput">Location</label>
                 </div>
@@ -58,7 +58,7 @@
                     type="text"
                     class="form-control"
                     id="floatingABout"
-                    v-model="about"
+                    v-model="user.about"
                   />
                   <label for="floatingPassword">Describe Yourself</label>
                 </div>
