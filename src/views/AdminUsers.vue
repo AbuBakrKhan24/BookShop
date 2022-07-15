@@ -1,5 +1,15 @@
 <template>
   <div>
+    <!-- FILTERS -->
+    <div>
+      <input type="text" v-model="search" placeholder="Search" />
+      <select v-model="role">
+        <option value="username">Username</option>
+        <option value="email">Email</option>
+        <option value="about">About</option>
+        <option value="location">Location</option>
+      </select>
+    </div>
     <div class="user-display">
       <div class="user-display">
         <table class="table table-hover table-bordered">
@@ -66,84 +76,84 @@
                                 <div class="title form-floating">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control mb-2"
                                     id="floatingPassword"
                                     placeholder="Title"
                                     v-model="user.email"
                                   />
-                                  <label for="floatingTitle">email</label>
+                                  <label for="floatingTitle">Email</label>
                                 </div>
 
                                 <div class="description form-floating">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control mb-2"
                                     id="floatingDescription"
                                     placeholder="Description"
                                     v-model="user.password"
                                   />
                                   <label for="floatingDescription"
-                                    >password</label
+                                    >Password</label
                                   >
                                 </div>
 
                                 <div class="description form-floating">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control mb-2"
                                     id="floatingDescription"
                                     placeholder="Description"
                                     v-model="user.username"
                                   />
                                   <label for="floatingDescription"
-                                    >username</label
+                                    >Username</label
                                   >
                                 </div>
 
                                 <div class="year form-floating">
                                   <input
-                                    type="number"
-                                    class="form-control"
+                                    type="text"
+                                    class="form-control mb-2"
                                     id="floatingYear"
                                     placeholder="Year"
                                     v-model="user.avatar"
                                   />
-                                  <label for="floatingYear">avatar</label>
+                                  <label for="floatingYear">Avatar</label>
                                 </div>
 
                                 <div class="pages form-floating">
                                   <input
-                                    type="number"
-                                    class="form-control"
+                                    type="text"
+                                    class="form-control mb-2"
                                     id="floatingPages"
                                     placeholder="Pages"
                                     v-model="user.location"
                                   />
-                                  <label for="floatingPages">location</label>
+                                  <label for="floatingPages">Location</label>
                                 </div>
 
                                 <div class="file form-floating mb-3">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control mb-2"
                                     id="floatingFile"
                                     placeholder="file url"
                                     v-model="user.about"
                                   />
-                                  <label for="floatingInput">about</label>
+                                  <label for="floatingInput">About</label>
                                 </div>
 
                                 <div class="file form-floating mb-3">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control mb-2"
                                     id="floatingFile"
                                     placeholder="file url"
                                     v-model="user.role"
                                   />
-                                  <label for="floatingInput">role</label>
+                                  <label for="floatingInput">Role</label>
                                 </div>
-
+                                <button type="submit">Save</button>
                                 <div class="modal-footer">
                                   <button
                                     type="button"

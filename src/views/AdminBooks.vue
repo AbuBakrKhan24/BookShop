@@ -243,7 +243,7 @@
                             <div class="title form-floating">
                               <input
                                 type="text"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingPassword"
                                 placeholder="Title"
                                 v-model="book.title"
@@ -253,7 +253,7 @@
                             <div class="description form-floating">
                               <input
                                 type="text"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingDescription"
                                 placeholder="Description"
                                 v-model="book.description"
@@ -264,7 +264,7 @@
                             </div>
                             <div class="form-floating genre">
                               <select
-                                class="form-select"
+                                class="form-select mb-2"
                                 aria-label="Default select example"
                                 v-model="genre"
                               >
@@ -294,7 +294,7 @@
                             <div class="year form-floating">
                               <input
                                 type="number"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingYear"
                                 placeholder="Year"
                                 v-model="book.year"
@@ -304,14 +304,14 @@
                             <div class="pages form-floating">
                               <input
                                 type="number"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingPages"
                                 placeholder="Pages"
                                 v-model="book.pages"
                               />
                               <label for="floatingPages">Pages</label>
                             </div>
-                            <div class="tags form-floating">
+                            <div class="tags form-floating mb-2">
                               <select class="form-select" v-model="tags">
                                 <option selected>Open this select menu</option>
                                 <option value="drawing">Drawing</option>
@@ -338,7 +338,7 @@
                             <div class="file form-floating mb-3">
                               <input
                                 type="text"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingFile"
                                 placeholder="file url"
                                 v-model="book.file"
@@ -348,7 +348,7 @@
                             <div class="cover form-floating">
                               <input
                                 type="text"
-                                class="form-control"
+                                class="form-control mb-2"
                                 id="floatingCover"
                                 placeholder="Cover"
                                 v-model="book.cover"
