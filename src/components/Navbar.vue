@@ -36,7 +36,7 @@
                 aria-current="page"
                 to="/"
               >
-                Home
+                HOME
               </router-link>
             </li>
             <li>
@@ -44,7 +44,7 @@
                 class="nav-link active text-dark"
                 aria-current="page"
                 to="/library"
-                >Library</router-link
+                >LIBRARY</router-link
               >
             </li>
             <!-- Profile Page -->
@@ -55,7 +55,7 @@
                 aria-current="page"
                 to="/profile"
               >
-                Profile Page
+                PROFILE PAGE
               </router-link>
             </li>
           </div>
@@ -66,7 +66,7 @@
                 aria-current="page"
                 to="/login"
               >
-                Log in
+                LOG IN
               </router-link>
             </li>
 
@@ -76,7 +76,7 @@
                 aria-current="page"
                 to="/signup"
               >
-                Sign Up
+                SIGN UP
               </router-link>
             </li>
             <!-- <img
@@ -195,6 +195,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+a.navbar-brand.nav-link.active.text-dark {
+    font-weight: 900;
+}
 @keyframes book-bounce {
   0% {
     transform: translateY(0);
