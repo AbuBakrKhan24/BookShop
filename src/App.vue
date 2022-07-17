@@ -27,9 +27,9 @@ font-family: 'Varela';
 }
 
 div#footer {
-    margin-top: 8%;
+    /* margin-top: 8%; */
     background-color: rgba(0, 0, 0, 0.367);
-    width: 100%;
+    /* width: 100%; */
 }
 #hello {
     padding-top: 155px;
