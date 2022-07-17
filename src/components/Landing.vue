@@ -1,7 +1,7 @@
 <template>
   <div id="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    <div class="container yo">
+    <div class="container">
       <div class="row">
         <div class="col-lg-6 details">
           <header>
