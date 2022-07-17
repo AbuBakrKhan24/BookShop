@@ -6,7 +6,7 @@
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn btn-primary mb-3"
+      class="add-btn mb-3"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -15,16 +15,16 @@
     <!-- FILTERS -->
     <div>
       <input type="text" v-model="search" placeholder="Search" />
-      <select v-model="genre">
+      <select class="tilet-select" v-model="genre">
         <option value="all">All</option>
         <option value="art">Art</option>
         <option value="education">Education</option>
         <option value="biography">Biography</option>
         <option value="business">Business</option>
-        <option value="child & youth">Child & youth</option>
+        <option value="child and youth">Child and youth</option>
         <option value="environment">Environment</option>
         <option value="health">Health</option>
-        <option value="fiction & literature">Fiction & Literature</option>
+        <option value="fiction and literature">Fiction and Literature</option>
         <option value="personal growth">Personal Growth</option>
         <option value="lifestyle">Lifestyle</option>
         <option value="religion">Religion</option>
@@ -85,11 +85,11 @@
                   <option value="education">Education</option>
                   <option value="biography">Biography</option>
                   <option value="business">Business</option>
-                  <option value="child & youth">Child & Youth</option>
+                  <option value="child and youth">Child and Youth</option>
                   <option value="environment">Environment</option>
                   <option value="health">Health</option>
-                  <option value="fiction & literature">
-                    Fiction & Literature
+                  <option value="fiction and literature">
+                    Fiction and Literature
                   </option>
                   <option value="lifestyle">Lifestyle</option>
                   <option value="personal growth">Personal Growth</option>
@@ -272,13 +272,13 @@
                                 <option value="education">Education</option>
                                 <option value="biography">Biography</option>
                                 <option value="business">Business</option>
-                                <option value="child & youth">
-                                  Child & Youth
+                                <option value="child and youth">
+                                  Child and Youth
                                 </option>
                                 <option value="environment">Environment</option>
                                 <option value="health">Health</option>
-                                <option value="fiction & literature">
-                                  Fiction & Literature
+                                <option value="fiction and literature">
+                                  Fiction and Literature
                                 </option>
                                 <option value="lifestyle">Lifestyle</option>
                                 <option value="personal growth">
@@ -451,5 +451,33 @@ nav a.router-link-exact-active {
 
 img {
   height: 100px;
+}
+.title-select{
+  height:31px;
+}
+.add-btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 3px 3px 7px #6b686b;
+  -moz-box-shadow: 3px 3px 7px #6b686b;
+  box-shadow: 3px 3px 7px #6b686b;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #d99c34;
+  padding: 10px 20px 10px 20px;
+  border: solid #ff2ee7 0px;
+  text-decoration: none;
+}
+
+.add-btn:hover {
+  background: #fcb63c;
+  background-image: -webkit-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -moz-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -ms-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -o-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: linear-gradient(to bottom, #fcb63c, #d932d9);
+  text-decoration: none;
 }
 </style>

@@ -4,13 +4,18 @@ export default createStore({
   state: {
     // user: null || window.localStorage.getItem("user"),
     user: null,
+    users: null,
     book: null,
     books: null,
+    asc: true,
   },
 
   mutations: {
     setUser: (state, user) => {
       state.user = user;
+    },
+    setUsers: (state, users) => {
+      state.users = users;
     },
     setBook: (state, book) => {
       state.book = book;
@@ -34,15 +39,38 @@ export default createStore({
       }
       state.asc = !state.asc;
     },
+    sortUsersByUsername: (state) => {
+      state.users = state.users.sort((a, b) => {
+        // return a.number - b.number;
+        if (a.username < b.username) {
+          return -1;
+        }
+        if (a.username > b.username) {
+          return 1;
+        }
+        return 0;
+      });
+      if (!state.asc) {
+        state.users.reverse();
+      }
+      state.asc = !state.asc;
+    },
   },
   actions: {
     // USER
-    // getUser: async (context) => {
-    //   fetch("http://localhost:3000/user")
-    //     .then((res) => res.json())
-    //     .then((data) => context.commit("setUser", data))
-    //     .catch((err) => console.log(err.message));
-    // },
+    getUser: async (context, id) => {
+      fetch("http://localhost:3000/user" + id)
+        .then((res) => res.json())
+        .then((json) => context.commit("setUser", json))
+        .catch((err) => console.log(err.message));
+    },
+    // USERS
+    getUsers: async (context) => {
+      fetch("http://localhost:3000/users")
+        .then((res) => res.json())
+        .then((data) => context.commit("setUsers", data))
+        .catch((err) => console.log(err.message));
+    },
 
     // LOGIN USER
     login: async (context, payload) => {

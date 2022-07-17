@@ -2,13 +2,7 @@
   <div>
     <!-- FILTERS -->
     <div>
-      <input type="text" v-model="search" placeholder="Search" />
-      <select v-model="role">
-        <option value="username">Username</option>
-        <option value="email">Email</option>
-        <option value="about">About</option>
-        <option value="location">Location</option>
-      </select>
+      <button class="sort-btn mb-4" @click="sortUsers">Sort By Username</button>
     </div>
     <div class="user-display">
       <div class="user-display">
@@ -190,6 +184,11 @@ export default {
       return this.$store.state.users;
     },
   },
+  methods:{
+    sortUsers() {
+      this.$store.commit("sortUsersByUsername");
+    },
+  }
 };
 </script>
 <style>
@@ -203,6 +202,31 @@ nav a.router-link-exact-active {
 }
 img {
   height: 100px;
+}
+.sort-btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 3px 3px 7px #6b686b;
+  -moz-box-shadow: 3px 3px 7px #6b686b;
+  box-shadow: 3px 3px 7px #6b686b;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #d99c34;
+  padding: 10px 20px 10px 20px;
+  border: solid #ff2ee7 0px;
+  text-decoration: none;
+}
+
+.sort-btn:hover {
+  background: #fcb63c;
+  background-image: -webkit-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -moz-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -ms-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: -o-linear-gradient(top, #fcb63c, #d932d9);
+  background-image: linear-gradient(to bottom, #fcb63c, #d932d9);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 899) {
