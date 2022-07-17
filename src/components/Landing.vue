@@ -254,11 +254,11 @@ p {
     /* bottom: 0; */
     margin-top: 8%;
 }
-div#footer {
+/* div#footer {
     margin-top: 8%;
     background-color: rgba(0, 0, 0, 0.367);
     width: 100%;
-}
+} */
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;

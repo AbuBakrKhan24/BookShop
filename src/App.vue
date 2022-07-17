@@ -26,6 +26,20 @@ export default {
 font-family: 'Varela';
 }
 
+div#footer {
+    margin-top: 8%;
+    background-color: rgba(0, 0, 0, 0.367);
+    width: 100%;
+}
+#hello {
+    padding-top: 185px;
+    /* padding-top: 155px; */
+    /* padding-bottom: 8%; */
+    /* height: 100%; */
+    /* height: 92vh; */
+    background-image: linear-gradient( to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1 );
+}
+
 #app {
   /* height: 100vh; */
 
