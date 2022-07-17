@@ -159,7 +159,7 @@
     </div>
     <button
       type="button"
-      class="btn btn-outline-light mb-5"
+      class="btn btn-outline-dark mb-5"
       @click="addReadingList(book)"
       v-if="user"
     >
@@ -277,4 +277,10 @@ img {
   padding: 20px;
   border-radius: 4%;
 }
+
+/* .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+} */
 </style>

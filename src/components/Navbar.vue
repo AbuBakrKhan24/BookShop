@@ -273,6 +273,10 @@ nav.navbar {
 
 .book_create {
   border: none;
+<<<<<<< HEAD
   background-color: white;
+=======
+  background-color: #f8f9fa;
+>>>>>>> Abu-work-from-home
 }
 </style>

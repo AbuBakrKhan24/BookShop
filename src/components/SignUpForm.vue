@@ -1,5 +1,6 @@
 <template>
-  <div class="Form_Holder mt-5">
+<div class="box">
+  <div class="Form_Holder">
     <div class="card" style="width: fit-content">
       <div class="card-body">
         <svg
@@ -223,6 +224,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -260,12 +262,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.box{
+  background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
 // Form_Holder
 .Form_Holder {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-bottom: 5%;
+  padding-top: 5%;
 }
 // Form_Holder done
 
