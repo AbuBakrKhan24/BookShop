@@ -34,7 +34,7 @@ font-family: 'Varela';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #d16ba5,
     #c777b9,
@@ -48,7 +48,7 @@ font-family: 'Varela';
     #41dfff,
     #46eefa,
     #5ffbf1
-  );
+  ); */
 }
 
 /* nav {

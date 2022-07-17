@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="hello">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="container yo">
       <div class="row">
@@ -166,16 +166,16 @@ a
   margin-top: 30px;
 }
 
-.hello[data-v-98feeed2] {
+#hello {
     padding-top: 155px;
     /* padding-bottom: 8%; */
     /* height: 100%; */
     /* height: 92vh; */
     background-image: linear-gradient( to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1 );
 }
-.yo {
+/* .yo {
   background-image: linear-gradient( to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1 );
-}
+} */
 
 img {
   height: 50vh;
