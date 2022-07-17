@@ -73,13 +73,24 @@
         <p class="footer-text mt-5">© 2022 BOOKDOM</p>
         <ul class="icons mt-4 d-flex">
           <li class="ms-5 text-light">
-            <i class="fa-brands fa-facebook-square FaceBook"></i>
+            
+            <a target="_blank" href="https://fb.me/BookdomProject">
+          <i class="fa-brands fa-facebook-square FaceBook"></i>
+            </a>
           </li>
+          
           <li class="ms-5 text-light">
+            <a target="_blank" href="https://www.instagram.com/bookdom_project/">
             <i class="fa-brands fa-instagram Instagram"></i>
+            </a>
           </li>
-          <li class="ms-5 text-light"><i class="fa-brands fa-twitter Twitter"></i></li>
-          <li></li>
+          
+          <li class="ms-5 text-light">
+            <a target="_blank" href="https://twitter.com/BookdomProject">
+            <i class="fa-brands fa-twitter Twitter"></i>
+            </a>
+            </li>
+          
         </ul>
       </div>
     </div>
@@ -247,5 +258,10 @@ p {
     margin-top: calc(-1 * var(--bs-gutter-y));
     /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
     margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+a {
+    color: #f9fafb;
+    text-decoration: underline;
 }
 </style>

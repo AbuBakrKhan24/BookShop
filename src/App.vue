@@ -1,7 +1,7 @@
 <template>
   <Navbar></Navbar>
 
-  <router-view />
+  <router-view  :key="$route.fullPath"/>
 </template>
 
 <script>
@@ -18,6 +18,13 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+*{
+font-family: 'Varela';
+}
+
 #app {
   /* height: 100vh; */
 

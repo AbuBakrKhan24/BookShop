@@ -1109,6 +1109,15 @@
       "about": "I am the God",
       "role": "creator",
       "id": 12
+    },
+    {
+      "username": "abubakrkhan224@gmail.com",
+      "email": "abubakrkhan224@gmail.com",
+      "password": "password0312",
+      "avatar": [
+        "https://github.com/AbuBakrKhan24/BookShop/blob/ABU/src/assets/3.png?raw=true"
+      ],
+      "id": 13
     }
   ],
   "library": [],
