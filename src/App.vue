@@ -32,7 +32,7 @@ div#footer {
     width: 100%;
 }
 #hello {
-    padding-top: 185px;
+    padding-top: 155px;
     /* padding-top: 155px; */
     /* padding-bottom: 8%; */
     /* height: 100%; */
