@@ -25,11 +25,11 @@ export default {
 *{
 font-family: 'Varela';
 }
-.profileAvatar[data-v-41458b80] {
+/* .profileAvatar[data-v-41458b80] {
     right: 100px;
     position: absolute;
     border-radius: 50%;
-}
+} */
 
 div#footer {
     /* margin-top: 8%; */
